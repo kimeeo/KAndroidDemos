@@ -26,12 +26,12 @@ dependencies {
     compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
 
-    final KANDROID_LISTVIEW_VERSION = '1bd58bddad'
+    final KANDROID_LISTVIEW_VERSION = '0d824fe9d7'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
 
-    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '0d8bcaabc8'
+    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '929a5e4dc4'
     compile ("com.github.kimeeo:AndroidQuery_DataProvider:$ANDROID_QUERY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }

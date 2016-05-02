@@ -50,11 +50,11 @@ public class AQDataProvider extends JSONDataProvider {
         return null;
     }
     @Override
-    protected Class getListParser() {
-        return BaseListParser.class;
+    protected Class getDataModel() {
+        return BaseDataModel.class;
     }
 
-    public class BaseListParser extends ListParser
+    public class BaseDataModel implements DataModel
     {
         private String success;
         private List<DataBean> data;

@@ -34,9 +34,9 @@ public class RetrofitDataProvider extends BackgroundDataProvider{
                 List<Posts.Post> posts = post.execute().body().posts;
                 addData(posts);
             } catch (IOException e) {
-                System.out.println(e);
+                dataLoadError(e);
             } catch (Exception e) {
-                System.out.println(e);
+                dataLoadError(e);
             }
         }else
         {
