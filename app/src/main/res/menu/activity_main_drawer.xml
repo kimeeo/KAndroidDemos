@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Recycle View">
+        <menu>
+            <item android:id="@+id/nav_recycle_view_vertical_list" android:title="Vertical List" />
+            <item android:id="@+id/nav_recycle_view_horizontal_list" android:title="Horizontal List" />
+        </menu>
+    </item>
+
+    <item android:title="List View">
+        <menu>
+            <item android:id="@+id/nav_old_list_view" android:title="Share" />
+        </menu>
+    </item>
+
+    <item android:title="Data Manager">
+        <menu>
+            <item android:id="@+id/nav_a_q" android:title="Android Query" />
+            <item android:id="@+id/nav_retrofit" android:title="Retrofit" />
+        </menu>
+    </item>
+
+
+</menu>
