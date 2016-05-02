@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.recycleView;
+package com.kimeeo.kAndroidDemos.services.retrofilt;
 
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -8,18 +8,16 @@ import android.widget.TextView;
 
 import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
-import com.kimeeo.kAndroid.listViews.recyclerView.horizontalViews.ListView;
+import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.R;
-import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
-import com.kimeeo.kAndroidDemos.services.DataBean;
 
 /**
  * Created by BhavinPadhiyar on 02/05/16.
  */
-public class RecyclerViewHorizontal extends ListView{
+public class RetrofitRecyclerViewVertical extends ListView{
     @Override
     public View getItemView(int i, LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        return layoutInflater.inflate(R.layout.sample_list_view_item_width,viewGroup,false);
+        return layoutInflater.inflate(R.layout.sample_list_view_item,viewGroup,false);
     }
     @Override
     public BaseItemHolder getItemHolder(int i, View view){
@@ -29,7 +27,7 @@ public class RecyclerViewHorizontal extends ListView{
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
-        return new AQDataProvider(getActivity(),false,false);
+        return new RetrofitDataProvider();
     }
 
     public class BaseItemHolder1 extends BaseItemHolder
@@ -39,9 +37,9 @@ public class RecyclerViewHorizontal extends ListView{
         }
         @Override
         public void updateItemView(Object o, View view, int i) {
-            DataBean data = (DataBean) o;
+            RetrofitDataProvider.Posts.Post data = (RetrofitDataProvider.Posts.Post) o;
             TextView title = (TextView) view.findViewById(R.id.title);
-            title.setText(i +". "+data.getTitle());
+            title.setText(i +". "+data.getContent());
         }
     }
 }

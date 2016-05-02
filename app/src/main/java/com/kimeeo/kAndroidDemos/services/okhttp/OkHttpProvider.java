@@ -1,24 +1,27 @@
-package com.kimeeo.kAndroidDemos.services.aADataProvider;
+package com.kimeeo.kAndroidDemos.services.okhttp;
 
 import android.content.Context;
 
-import com.kimeeo.kAndroid.aQueryDataProvider.JSONDataProvider;
 import com.kimeeo.kAndroid.listViews.dataProvider.DataModel;
+import com.kimeeo.kAndroid.okHTTPDataProvider.JSONDataProvider;
 import com.kimeeo.kAndroidDemos.services.BaseDataModel;
 import com.kimeeo.kAndroidDemos.services.DataBean;
 
 import java.util.List;
 import java.util.Map;
 
+import okhttp3.OkHttpClient;
+import okhttp3.RequestBody;
+
 /**
  * Created by BhavinPadhiyar on 02/05/16.
  */
-public class AQDataProvider extends JSONDataProvider {
+public class OkHttpProvider extends JSONDataProvider {
     int curruntPage=0;
     int minCurruntPage=0;
-    public AQDataProvider(Context context,boolean nextEnabled,boolean refreshEnabled)
+    public OkHttpProvider(OkHttpClient client,boolean nextEnabled, boolean refreshEnabled)
     {
-        super(context);
+        super(client);
         setNextEnabled(nextEnabled);
         setRefreshEnabled(refreshEnabled);
     }
@@ -48,12 +51,19 @@ public class AQDataProvider extends JSONDataProvider {
             return null;
         }
     }
-    @Override
-    protected Map<String, Object> getNextParam() {
-        return null;
-    }
+
     @Override
     protected Class getDataModel() {
         return BaseDataModel.class;
+    }
+
+    @Override
+    protected RequestBody getNextRequestBody() {
+        return null;
+    }
+
+    @Override
+    protected RequestBody getRefreshRequestBody() {
+        return null;
     }
 }

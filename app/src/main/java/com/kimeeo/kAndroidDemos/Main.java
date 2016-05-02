@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
 import com.kimeeo.kAndroidDemos.recycleView.RecyclerViewHorizontal;
 import com.kimeeo.kAndroidDemos.recycleView.RecyclerViewVertical;
+import com.kimeeo.kAndroidDemos.services.okhttp.OkHTTPRecyclerViewVertical;
+import com.kimeeo.kAndroidDemos.services.retrofilt.RetrofitRecyclerViewVertical;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,7 +41,8 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_recycle_view_horizontal_list, RecyclerViewHorizontal.class);
 
         views.put(R.id.nav_a_q, RecyclerViewVertical.class);
-        views.put(R.id.nav_retrofit, com.kimeeo.kAndroidDemos.services.retrofilt.RecyclerViewVertical.class);
+        views.put(R.id.nav_retrofit, RetrofitRecyclerViewVertical.class);
+        views.put(R.id.nav_ok_http, OkHTTPRecyclerViewVertical.class);
 
         loadView(R.id.nav_recycle_view_vertical_list);
     }

@@ -1,7 +1,6 @@
 package com.kimeeo.kAndroidDemos.services.retrofilt;
 
 import com.kimeeo.kAndroid.listViews.dataProvider.BackgroundDataProvider;
-import com.kimeeo.kAndroidDemos.services.aADataProvider.DataBean;
 
 import java.io.IOException;
 import java.util.List;
@@ -23,16 +22,20 @@ public class RetrofitDataProvider extends BackgroundDataProvider{
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://kimeeo.com/restT/api/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
         service = retrofit.create(PostsService.class);
-        setCanLoadRefresh(false);
+        setCanLoadRefresh(true);
+        setNextEnabled(true);
     }
 
     @Override
     protected void invokeLoadNext() {
-        if(curruntPage==0) {
+        if(curruntPage!=20) {
             try {
+                curruntPage +=1;
                 Call<Posts> post = service.listPost();
                 List<Posts.Post> posts = post.execute().body().posts;
-                addData(posts);
+                //addData(posts);
+                addDataThreadSafe(posts);
+                //addDataInThread(posts);
             } catch (IOException e) {
                 dataLoadError(e);
             } catch (Exception e) {
@@ -47,6 +50,7 @@ public class RetrofitDataProvider extends BackgroundDataProvider{
     @Override
     protected void invokeloadRefresh() {
         setCanLoadRefresh(false);
+        dataLoadError(null);
     }
 
     public interface PostsService {

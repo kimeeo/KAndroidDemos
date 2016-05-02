@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.services.aADataProvider;
+package com.kimeeo.kAndroidDemos.services;
 
 /**
  * Created by BhavinPadhiyar on 02/05/16.

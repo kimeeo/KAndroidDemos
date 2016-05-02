@@ -11,7 +11,7 @@ import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
-import com.kimeeo.kAndroidDemos.services.aADataProvider.DataBean;
+import com.kimeeo.kAndroidDemos.services.DataBean;
 
 /**
  * Created by BhavinPadhiyar on 02/05/16.
