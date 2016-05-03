@@ -2,13 +2,7 @@ package com.kimeeo.kAndroidDemos.services.retrofilt;
 
 
 import com.kimeeo.kAndroid.listViews.dataProvider.BackgroundDataProvider;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataModel;
 import com.kimeeo.kAndroidDemos.services.BaseDataModel;
-
-import java.io.IOException;
-import java.util.List;
-
-import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.GsonConverterFactory;
