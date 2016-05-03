@@ -19,6 +19,7 @@
             <item android:id="@+id/nav_a_q" android:title="Android Query" />
             <item android:id="@+id/nav_retrofit" android:title="Retrofit" />
             <item android:id="@+id/nav_ok_http" android:title="Ok HTTP" />
+            <item android:id="@+id/nav_rss" android:title="Ok HTTP" />
         </menu>
     </item>
 

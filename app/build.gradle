@@ -46,4 +46,9 @@ dependencies {
     compile ("com.github.kimeeo:RetrofitDataProvider:$RETROFIT_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
+
+    final RSS_DATA_PROVIDER_VERSION = '68958912cd'
+    compile ("com.github.kimeeo:RSSDataProvider:$RSS_DATA_PROVIDER_VERSION@aar"){
+        transitive=true
+    }
 }
