@@ -13,9 +13,14 @@ import android.view.MenuItem;
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
 import com.kimeeo.kAndroidDemos.recycleView.RecyclerViewHorizontal;
 import com.kimeeo.kAndroidDemos.recycleView.RecyclerViewVertical;
+import com.kimeeo.kAndroidDemos.services.local.AssetsView;
+import com.kimeeo.kAndroidDemos.services.local.DirectoryView;
+import com.kimeeo.kAndroidDemos.services.local.FileView;
+import com.kimeeo.kAndroidDemos.services.local.RawView;
 import com.kimeeo.kAndroidDemos.services.okhttp.OkHTTPRecyclerViewVertical;
 import com.kimeeo.kAndroidDemos.services.retrofilt.RetrofitRecyclerViewVertical;
 import com.kimeeo.kAndroidDemos.services.rss.RSSRecyclerViewVertical;
+import com.kimeeo.kAndroidDemos.services.sqlLite.SQLLiteRecyclerViewVertical;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,6 +50,14 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_retrofit, RetrofitRecyclerViewVertical.class);
         views.put(R.id.nav_ok_http, OkHTTPRecyclerViewVertical.class);
         views.put(R.id.nav_rss, RSSRecyclerViewVertical.class);
+
+        views.put(R.id.nav_sql_lite, SQLLiteRecyclerViewVertical.class);
+
+
+        views.put(R.id.nav_directory, DirectoryView.class);
+        views.put(R.id.nav_local_assets, AssetsView.class);
+        views.put(R.id.nav_local_file, FileView.class);
+        views.put(R.id.nav_local_raw, RawView.class);
 
 
         loadView(R.id.nav_recycle_view_vertical_list);

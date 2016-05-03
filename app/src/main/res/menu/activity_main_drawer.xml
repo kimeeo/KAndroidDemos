@@ -19,7 +19,13 @@
             <item android:id="@+id/nav_a_q" android:title="Android Query" />
             <item android:id="@+id/nav_retrofit" android:title="Retrofit" />
             <item android:id="@+id/nav_ok_http" android:title="Ok HTTP" />
-            <item android:id="@+id/nav_rss" android:title="Ok HTTP" />
+            <item android:id="@+id/nav_volley" android:title="Volley" />
+            <item android:id="@+id/nav_rss" android:title="RSS" />
+            <item android:id="@+id/nav_sql_lite" android:title="SQL Lite" />
+            <item android:id="@+id/nav_local_file" android:title="Local File" />
+            <item android:id="@+id/nav_local_raw" android:title="Local Raw" />
+            <item android:id="@+id/nav_local_assets" android:title="Local Assets" />
+            <item android:id="@+id/nav_directory" android:title="Directory" />
         </menu>
     </item>
 
