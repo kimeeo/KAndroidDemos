@@ -1,10 +1,17 @@
 package com.kimeeo.kAndroidDemos.services.retrofilt;
 
+import android.os.Handler;
+import android.os.Looper;
+
+import com.jakewharton.retrofit.Ok3Client;
 import com.kimeeo.kAndroid.listViews.dataProvider.BackgroundDataProvider;
 
 import java.io.IOException;
 import java.util.List;
 
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.GsonConverterFactory;
 import retrofit2.Retrofit;
@@ -19,8 +26,10 @@ public class RetrofitDataProvider extends BackgroundDataProvider{
     PostsService service;
     public RetrofitDataProvider()
     {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://kimeeo.com/restT/api/")
-                .addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit.Builder builder= new Retrofit.Builder();
+        builder.baseUrl("http://kimeeo.com/restT/api/");
+        builder.addConverterFactory(GsonConverterFactory.create());
+        Retrofit retrofit =builder.build();
         service = retrofit.create(PostsService.class);
         setCanLoadRefresh(true);
         setNextEnabled(true);
@@ -32,13 +41,18 @@ public class RetrofitDataProvider extends BackgroundDataProvider{
             try {
                 curruntPage +=1;
                 Call<Posts> post = service.listPost();
-                List<Posts.Post> posts = post.execute().body().posts;
-                //addData(posts);
-                addDataThreadSafe(posts);
-                //addDataInThread(posts);
-            } catch (IOException e) {
-                dataLoadError(e);
-            } catch (Exception e) {
+                retrofit2.Callback<Posts> callback =new retrofit2.Callback<Posts>(){
+                    @Override
+                    public void onResponse(final Call<Posts> call,final  retrofit2.Response<Posts> response) {
+                        addDataThreadSafe(response.body().posts);
+                    }
+                    @Override
+                    public void onFailure(Call<Posts> call, final Throwable t) {
+                        dataLoadErrorThreadSafe(t);
+                    }
+                };
+                post.enqueue(callback);
+            }catch (Exception e) {
                 dataLoadError(e);
             }
         }else

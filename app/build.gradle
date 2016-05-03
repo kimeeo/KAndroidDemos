@@ -26,17 +26,17 @@ dependencies {
     compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
 
-    final KANDROID_LISTVIEW_VERSION = 'b9532b1306'
+    final KANDROID_LISTVIEW_VERSION = '603d0c9958'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
 
-    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '68c1d2abad'
+    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:AndroidQuery_DataProvider:$ANDROID_QUERY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final OK_HTTP_DATA_PROVIDER_VERSION = '7910c1f116'
+    final OK_HTTP_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:okHTTPDataProvider:$OK_HTTP_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
@@ -46,4 +46,7 @@ dependencies {
     //retrofit
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+    //http://square.github.io/okhttp/
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.jakewharton.retrofit:retrofit1-okhttp3-client:1.0.2'
 }
