@@ -11,19 +11,23 @@ import retrofit2.Callback;
  */
 abstract public class BaseRetrofitDataProvider extends BackgroundDataProvider{
     protected void call(Call call) {
-        Callback<DataModel> callback = new Callback<DataModel>() {
-            @Override
-            public void onResponse(Call<DataModel> call, retrofit2.Response<DataModel> response) {
-                DataModel dataModel=response.body();
-                processDataManager(dataModel);
-            }
+        if(call!=null)
+        {
+            Callback<DataModel> callback = new Callback<DataModel>() {
+                @Override
+                public void onResponse(Call<DataModel> call, retrofit2.Response<DataModel> response) {
+                    DataModel dataModel=response.body();
+                    processDataManager(dataModel);
+                }
 
-            @Override
-            public void onFailure(Call<DataModel> call, Throwable t) {
-                processDataManager(null);
-            }
-        };
-        call.enqueue(callback);
+                @Override
+                public void onFailure(Call<DataModel> call, Throwable t) {
+                    processDataManager(null);
+                }
+            };
+            call.enqueue(callback);
+        }
+        else
+            dataLoadError(null);
     }
-
 }

@@ -19,6 +19,7 @@ import retrofit2.http.Path;
 public class RetrofitDataProvider2 extends BaseRetrofitDataProvider{
 
     int curruntPage=0;
+    int minCurruntPage=0;
     PostsService service;
     public RetrofitDataProvider2()
     {
@@ -29,6 +30,7 @@ public class RetrofitDataProvider2 extends BaseRetrofitDataProvider{
         service = retrofit.create(PostsService.class);
         setCanLoadRefresh(true);
         setNextEnabled(true);
+        setRefreshEnabled(true);
     }
 
     @Override
@@ -47,7 +49,17 @@ public class RetrofitDataProvider2 extends BaseRetrofitDataProvider{
     }
     @Override
     protected void invokeLoadRefresh() {
-        setCanLoadRefresh(false);
+        if(minCurruntPage!=2) {
+            try {
+                minCurruntPage +=1;
+                call(service.dataModel("data_m"+minCurruntPage+".txt"));
+            }catch (Exception e) {
+            }
+        }else
+        {
+            setCanLoadRefresh(false);
+            processDataManager(null);
+        }
     }
 
     public interface PostsService{
