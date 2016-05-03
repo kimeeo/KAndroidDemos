@@ -11,7 +11,6 @@ import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.DataBean;
-import com.kimeeo.kAndroidDemos.services.retrofilt.RetrofitDataProvider;
 
 import okhttp3.OkHttpClient;
 

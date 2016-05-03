@@ -10,6 +10,7 @@ import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.R;
+import com.kimeeo.kAndroidDemos.services.DataBean;
 
 /**
  * Created by BhavinPadhiyar on 02/05/16.
@@ -27,7 +28,7 @@ public class RetrofitRecyclerViewVertical extends ListView{
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
-        return new RetrofitDataProvider();
+        return new RetrofitDataProvider2();
     }
 
     public class BaseItemHolder1 extends BaseItemHolder
@@ -37,9 +38,9 @@ public class RetrofitRecyclerViewVertical extends ListView{
         }
         @Override
         public void updateItemView(Object o, View view, int i) {
-            RetrofitDataProvider.Posts.Post data = (RetrofitDataProvider.Posts.Post) o;
+            DataBean data = (DataBean) o;
             TextView title = (TextView) view.findViewById(R.id.title);
-            title.setText(i +". "+data.getContent());
+            title.setText(i +". "+data.getName());
         }
     }
 }

@@ -15,6 +15,10 @@ public class BaseDataModel implements DataModel
     public List getDataProvider() {
         return data;
     }
+    @Override
+    public void setDataProvider(List list) {
+        data=list;
+    }
 
     public String getSuccess() {
         return success;
