@@ -37,6 +37,11 @@ dependencies {
         transitive=true
     }
 
+    final VOLLEY_DATA_PROVIDER_VERSION = '0ca2157d18'
+    compile ("com.github.kimeeo:KAndroid_VolleyDataProvider:$VOLLEY_DATA_PROVIDER_VERSION@aar"){
+        transitive=true
+    }
+
     final OK_HTTP_DATA_PROVIDER_VERSION = '821c4b0054'
     compile ("com.github.kimeeo:okHTTPDataProvider:$OK_HTTP_DATA_PROVIDER_VERSION@aar"){
         transitive=true
@@ -58,5 +63,11 @@ dependencies {
     compile ("com.github.kimeeo:kAndroid_LocalDataProvider:$LOCAL_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
+
+    final MAP_VERSION = 'e7a2e32817'
+    compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
+        transitive=true
+    }
+
 
 }
