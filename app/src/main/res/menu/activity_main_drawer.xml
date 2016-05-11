@@ -37,4 +37,12 @@
     </item>
 
 
+    <item android:title="Binding">
+        <menu>
+            <item android:id="@+id/nav_bind_recycle" android:title="Recycle" />
+            <item android:id="@+id/nav_bind_list" android:title="List" />
+            <item android:id="@+id/nav_bind_page" android:title="Pager" />
+
+        </menu>
+    </item>
 </menu>

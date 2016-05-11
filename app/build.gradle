@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+//BINDING
+apply plugin: 'com.android.databinding'
 
 android {
     compileSdkVersion 23
@@ -68,6 +70,7 @@ dependencies {
     compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
         transitive=true
     }
+
 
 
     //https://github.com/500px/greedo-layout-for-android
