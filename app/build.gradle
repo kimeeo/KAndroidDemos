@@ -29,44 +29,44 @@ dependencies {
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
 
 
-    final KANDROID_LISTVIEW_VERSION = '0c12b51cbe'
+    final KANDROID_LISTVIEW_VERSION = '7d7ad9ad1a'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
 
-    final ANDROID_QUERY_DATA_PROVIDER_VERSION = 'b0a779a8b8'
+    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '741fc963f7'
     compile ("com.github.kimeeo:AndroidQuery_DataProvider:$ANDROID_QUERY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final VOLLEY_DATA_PROVIDER_VERSION = '0ca2157d18'
+    final VOLLEY_DATA_PROVIDER_VERSION = '3e19ad9bf3'
     compile ("com.github.kimeeo:KAndroid_VolleyDataProvider:$VOLLEY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final OK_HTTP_DATA_PROVIDER_VERSION = '821c4b0054'
+    final OK_HTTP_DATA_PROVIDER_VERSION = '7a097f5797'
     compile ("com.github.kimeeo:okHTTPDataProvider:$OK_HTTP_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final RETROFIT_DATA_PROVIDER_VERSION = '5983e97139'
+    final RETROFIT_DATA_PROVIDER_VERSION = 'e125b5eba2'
     compile ("com.github.kimeeo:RetrofitDataProvider:$RETROFIT_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final RSS_DATA_PROVIDER_VERSION = '15df9028ee'
+    final RSS_DATA_PROVIDER_VERSION = '4974ad0e70'
     compile ("com.github.kimeeo:RSSDataProvider:$RSS_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final LOCAL_DATA_PROVIDER_VERSION = 'c485c6ba82'
+    final LOCAL_DATA_PROVIDER_VERSION = 'fc68a7fa64'
     compile ("com.github.kimeeo:kAndroid_LocalDataProvider:$LOCAL_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final MAP_VERSION = 'e7a2e32817'
+    final MAP_VERSION = 'e2f9161829'
     compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
         transitive=true
     }
