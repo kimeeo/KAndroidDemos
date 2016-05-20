@@ -50,6 +50,24 @@
         </menu>
     </item>
 
+    <item android:title="Recycle Sticky Headers ">
+        <menu>
+            <item
+                android:id="@+id/nav_recycle_view_vertical_sticky_list"
+                android:title="List" />
+            <item
+                android:id="@+id/nav_recycle_view_vertical_sticky_grid"
+                android:title="Grid" />
+            <item
+                android:id="@+id/nav_recycle_view_horizontal_sticky_list"
+                android:title="Horizontal List" />
+            <item
+                android:id="@+id/nav_recycle_view_horizontal_sticky_gird"
+                android:title="Horizontal List" />
+        </menu>
+    </item>
+
+
     <item android:title="Recycle View Group">
         <menu>
             <item
@@ -65,6 +83,24 @@
             <item
                 android:id="@+id/nav_recycle_view_runtime_layout_change"
                 android:title="Change Layouts" />
+        </menu>
+    </item>
+
+
+    <item android:title="Recycle Fast Scroll Views">
+        <menu>
+            <item
+                android:id="@+id/nav_recycle_view_fast_scroll_vertical_list"
+                android:title="List" />
+            <item
+                android:id="@+id/nav_recycle_view_fast_scroll_vertical_grid"
+                android:title="Grid" />
+            <item
+                android:id="@+id/nav_recycle_view_fast_scroll_vertical_responsive"
+                android:title="Responsive" />
+            <item
+                android:id="@+id/nav_recycle_view_fast_scroll_vertical_staggered"
+                android:title="StaggeredGrid" />
         </menu>
     </item>
 

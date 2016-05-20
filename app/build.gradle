@@ -30,50 +30,55 @@ dependencies {
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
     compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
 
+    //final KANDROID_LISTVIEW_VERSION = 'VA0.1'
+    final KANDROID_LISTVIEW_VERSION = '8c4cd035b6'
 
-    final KANDROID_LISTVIEW_VERSION = '098e8b2a68'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
 
-    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '741fc963f7'
+    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '3bc36632d0'
     compile ("com.github.kimeeo:AndroidQuery_DataProvider:$ANDROID_QUERY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final VOLLEY_DATA_PROVIDER_VERSION = '3e19ad9bf3'
+    final VOLLEY_DATA_PROVIDER_VERSION = 'a8b1d90cef'
     compile ("com.github.kimeeo:KAndroid_VolleyDataProvider:$VOLLEY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final OK_HTTP_DATA_PROVIDER_VERSION = '7a097f5797'
+    final OK_HTTP_DATA_PROVIDER_VERSION = 'e1e6cc2008'
     compile ("com.github.kimeeo:okHTTPDataProvider:$OK_HTTP_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final RETROFIT_DATA_PROVIDER_VERSION = 'e125b5eba2'
+    final RETROFIT_DATA_PROVIDER_VERSION = '3fa1de4890'
     compile ("com.github.kimeeo:RetrofitDataProvider:$RETROFIT_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final RSS_DATA_PROVIDER_VERSION = '4974ad0e70'
+    final RSS_DATA_PROVIDER_VERSION = '844eb5dead'
     compile ("com.github.kimeeo:RSSDataProvider:$RSS_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final LOCAL_DATA_PROVIDER_VERSION = 'fc68a7fa64'
+    final LOCAL_DATA_PROVIDER_VERSION = '9b1524cb24'
     compile ("com.github.kimeeo:kAndroid_LocalDataProvider:$LOCAL_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final MAP_VERSION = 'e2f9161829'
+    final MAP_VERSION = '129c828847'
     compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
         transitive=true
     }
 
 
+    final RECYCLER_VIEW_EXT_VERSION = 'cf42ef9cc5'
+    compile("com.github.kimeeo:KAndroid_RecyclerViewExt:$RECYCLER_VIEW_EXT_VERSION@aar") {
+        transitive = true
+    }
 
     //https://github.com/500px/greedo-layout-for-android
     compile 'com.fivehundredpx:greedo-layout:1.0.0'

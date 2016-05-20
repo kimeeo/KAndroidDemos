@@ -76,7 +76,16 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_recycle_view_runtime_layout_change, ProfileBasedListView.class);
 
 
+        views.put(R.id.nav_recycle_view_vertical_sticky_list, com.kimeeo.kAndroidDemos.recycleView.stickyRecyclerHeaders.VerticalList.class);
+        views.put(R.id.nav_recycle_view_vertical_sticky_grid, com.kimeeo.kAndroidDemos.recycleView.stickyRecyclerHeaders.VerticalGrid.class);
+        views.put(R.id.nav_recycle_view_horizontal_sticky_list, com.kimeeo.kAndroidDemos.recycleView.stickyRecyclerHeaders.HorizontalList.class);
+        views.put(R.id.nav_recycle_view_horizontal_sticky_gird, com.kimeeo.kAndroidDemos.recycleView.stickyRecyclerHeaders.HorizontalGrid.class);
 
+
+        views.put(R.id.nav_recycle_view_fast_scroll_vertical_list, com.kimeeo.kAndroidDemos.recycleView.fastScroll.ListView.class);
+        views.put(R.id.nav_recycle_view_fast_scroll_vertical_grid, com.kimeeo.kAndroidDemos.recycleView.fastScroll.GridView.class);
+        views.put(R.id.nav_recycle_view_fast_scroll_vertical_staggered, com.kimeeo.kAndroidDemos.recycleView.fastScroll.StaggeredGridView.class);
+        views.put(R.id.nav_recycle_view_fast_scroll_vertical_responsive, com.kimeeo.kAndroidDemos.recycleView.fastScroll.ResponsiveView.class);
 
 
 
