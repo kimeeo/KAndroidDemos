@@ -1,12 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Recycle View">
+    <item android:title="Recycle Vertical Views">
         <menu>
-            <item android:id="@+id/nav_recycle_view_vertical_list" android:title="Vertical List" />
-            <item android:id="@+id/nav_recycle_view_horizontal_list" android:title="Horizontal List" />
+            <item
+                android:id="@+id/nav_recycle_view_vertical_list"
+                android:title="List" />
+            <item
+                android:id="@+id/nav_recycle_view_vertical_grid"
+                android:title="Grid" />
+            <item
+                android:id="@+id/nav_recycle_view_vertical_responsive"
+                android:title="Responsive" />
+            <item
+                android:id="@+id/nav_recycle_view_vertical_staggered"
+                android:title="StaggeredGrid" />
         </menu>
     </item>
+
+
+    <item android:title="Recycle Horizontal Views">
+        <menu>
+            <item
+                android:id="@+id/nav_recycle_view_horizontal_list"
+                android:title="List" />
+            <item
+                android:id="@+id/nav_recycle_view_horizontal_grid"
+                android:title="Grid" />
+            <item
+                android:id="@+id/nav_recycle_view_horizontal_staggered"
+                android:title="StaggeredGrid" />
+        </menu>
+    </item>
+
+    <item android:title="Recycle Header ">
+        <menu>
+            <item
+                android:id="@+id/nav_recycle_view_header_list"
+                android:title="List" />
+            <item
+                android:id="@+id/nav_recycle_view_header_grid"
+                android:title="Grid" />
+            <item
+                android:id="@+id/nav_recycle_view_header_responsive"
+                android:title="Responsive" />
+            <item
+                android:id="@+id/nav_recycle_view_header_staggered"
+                android:title="StaggeredGrid" />
+        </menu>
+    </item>
+
+    <item android:title="Recycle View Group">
+        <menu>
+            <item
+                android:id="@+id/nav_recycle_view_vertical_linear_layout"
+                android:title="Vertical" />
+            <item
+                android:id="@+id/nav_recycle_view_horizontal_linear_layout"
+                android:title="Horizontal" />
+        </menu>
+    </item>
+    <item android:title="Recycle Runtime Layout">
+        <menu>
+            <item
+                android:id="@+id/nav_recycle_view_runtime_layout_change"
+                android:title="Change Layouts" />
+        </menu>
+    </item>
+
 
     <item android:title="List View">
         <menu>

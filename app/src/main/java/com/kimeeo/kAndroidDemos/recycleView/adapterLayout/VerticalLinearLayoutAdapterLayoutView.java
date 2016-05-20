@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.recycleView;
+package com.kimeeo.kAndroidDemos.recycleView.adapterLayout;
 
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -8,40 +8,41 @@ import android.widget.TextView;
 
 import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
-import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.R;
-import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
 import com.kimeeo.kAndroidDemos.services.DataBean;
+import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
 
 /**
- * Created by BhavinPadhiyar on 02/05/16.
+ * Created by BhavinPadhiyar on 20/05/16.
  */
-public class RecyclerViewVertical extends ListView{
+public class VerticalLinearLayoutAdapterLayoutView extends com.kimeeo.kAndroid.listViews.recyclerView.adapterLayout.VerticalLinearLayoutAdapterLayoutView {
+
     @Override
     public View getItemView(int i, LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        return layoutInflater.inflate(R.layout.sample_list_view_item,viewGroup,false);
+        return layoutInflater.inflate(R.layout.sample_list_view_item, viewGroup, false);
     }
+
     @Override
-    public BaseItemHolder getItemHolder(int i, View view){
+    public BaseItemHolder getItemHolder(int i, View view) {
         return new BaseItemHolder1(view);
     }
 
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
-        return new AQDataProvider(getActivity(),true,true);
+        return new AQDataProvider(getActivity(), true, true);
     }
 
-    public class BaseItemHolder1 extends BaseItemHolder
-    {
+    public class BaseItemHolder1 extends BaseItemHolder {
         public BaseItemHolder1(View itemView) {
             super(itemView);
         }
+
         @Override
         public void updateItemView(Object o, View view, int i) {
             DataBean data = (DataBean) o;
             TextView title = (TextView) view.findViewById(R.id.title);
-            title.setText(i +". "+data.getName());
+            title.setText(i + ". " + data.getName());
         }
     }
 }

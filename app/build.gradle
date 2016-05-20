@@ -1,6 +1,4 @@
 apply plugin: 'com.android.application'
-//BINDING
-apply plugin: 'com.android.databinding'
 
 android {
     compileSdkVersion 23
@@ -19,6 +17,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -27,9 +28,10 @@ dependencies {
     final SUPPORT_LIBRARY_VERSION = '23.3.0'
     compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
+    compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
 
 
-    final KANDROID_LISTVIEW_VERSION = '7d7ad9ad1a'
+    final KANDROID_LISTVIEW_VERSION = '098e8b2a68'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
