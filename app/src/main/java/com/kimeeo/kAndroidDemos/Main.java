@@ -13,6 +13,16 @@ import android.view.MenuItem;
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
 import com.kimeeo.kAndroidDemos.bindingDemo.RecyclerView;
 import com.kimeeo.kAndroidDemos.map.MapView;
+import com.kimeeo.kAndroidDemos.pager.CoverFlowView;
+import com.kimeeo.kAndroidDemos.pager.FlippableHorizontalStackViewPager;
+import com.kimeeo.kAndroidDemos.pager.FlippableVerticalStackViewPager;
+import com.kimeeo.kAndroidDemos.pager.HorizontalFragmentViewPager;
+import com.kimeeo.kAndroidDemos.pager.HorizontalViewPager;
+import com.kimeeo.kAndroidDemos.pager.Indicator_JakeWharton;
+import com.kimeeo.kAndroidDemos.pager.Indicator_RecycleView;
+import com.kimeeo.kAndroidDemos.pager.Indicator_SmartTab;
+import com.kimeeo.kAndroidDemos.pager.VerticleFragmentViewPager;
+import com.kimeeo.kAndroidDemos.pager.VerticleViewPager;
 import com.kimeeo.kAndroidDemos.recycleView.ProfileBasedListView;
 import com.kimeeo.kAndroidDemos.recycleView.adapterLayout.HorizontalLinearLayoutAdapterLayoutView;
 import com.kimeeo.kAndroidDemos.recycleView.adapterLayout.VerticalLinearLayoutAdapterLayoutView;
@@ -89,16 +99,22 @@ public class Main extends AppCompatActivity
 
         views.put(R.id.nav_recycle_view_helper, com.kimeeo.kAndroidDemos.recycleView.Helper.class);
 
-        views.put(R.id.nav_horizontal_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.HorizontalViewPager.class);
-        views.put(R.id.nav_verticle_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.VerticleViewPager.class);
+        views.put(R.id.nav_horizontal_view_pager, HorizontalViewPager.class);
+        views.put(R.id.nav_verticle_view_pager, VerticleViewPager.class);
 
-        views.put(R.id.nav_horizontal_fragment_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.HorizontalFragmentViewPager.class);
-        views.put(R.id.nav_verticle_fragment_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.VerticleFragmentViewPager.class);
+        views.put(R.id.nav_horizontal_fragment_view_pager, HorizontalFragmentViewPager.class);
+        views.put(R.id.nav_verticle_fragment_view_pager, VerticleFragmentViewPager.class);
 
 
-        views.put(R.id.nav_indicator_jake_wharton, com.kimeeo.kAndroidDemos.pager.viewPager.Indicator_JakeWharton.class);
-        views.put(R.id.nav_indicator_smart_tab, com.kimeeo.kAndroidDemos.pager.viewPager.Indicator_SmartTab.class);
-        views.put(R.id.nav_indicator_recyle_view, com.kimeeo.kAndroidDemos.pager.viewPager.Indicator_RecycleView.class);
+        views.put(R.id.nav_indicator_jake_wharton, Indicator_JakeWharton.class);
+        views.put(R.id.nav_indicator_smart_tab, Indicator_SmartTab.class);
+        views.put(R.id.nav_indicator_recyle_view, Indicator_RecycleView.class);
+
+        views.put(R.id.nav_flippable_vertical_stack_view_pager, FlippableVerticalStackViewPager.class);
+        views.put(R.id.nav_flippable_horizontal_stack_view_pager, FlippableHorizontalStackViewPager.class);
+        views.put(R.id.nav_cover_flow_view_pager, CoverFlowView.class);
+
+
 
 
 

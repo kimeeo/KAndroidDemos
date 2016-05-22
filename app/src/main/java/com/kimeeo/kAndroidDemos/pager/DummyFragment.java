@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.pager.viewPager;
+package com.kimeeo.kAndroidDemos.pager;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

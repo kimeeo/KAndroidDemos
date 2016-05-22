@@ -1,6 +1,5 @@
-package com.kimeeo.kAndroidDemos.pager.viewPager;
+package com.kimeeo.kAndroidDemos.pager;
 
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -14,42 +13,18 @@ import com.kimeeo.kAndroid.listViews.pager.viewPager.BaseViewPagerAdapter;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.DataBean;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
-import com.viewpagerindicator.PageIndicator;
 
 /**
  * Created by BhavinPadhiyar on 22/05/16.
  */
-public class Indicator_JakeWharton extends com.kimeeo.kAndroid.listViews.pager.viewPager.HorizontalViewPager {
-
-
-    @Override
-    protected void setUpIndicator(View indicator, ViewPager viewPager, boolean isFirstTime) {
-        if (isFirstTime && indicator instanceof PageIndicator) {
-            PageIndicator pageIndicator = (PageIndicator) indicator;
-            pageIndicator.setViewPager(viewPager);
-        } else if (indicator instanceof PageIndicator) {
-            PageIndicator pageIndicator = (PageIndicator) indicator;
-            pageIndicator.notifyDataSetChanged();
-        }
-    }
-
-    @Override
-    @LayoutRes
-    protected int getRootRefreshLayoutResID() {
-        return R.layout._fragment_view_pager_indicator_jake_wharton;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getRootLayoutResID() {
-        return R.layout._fragment_view_pager_indicator_jake_wharton;
-    }
+public class HorizontalViewPager extends com.kimeeo.kAndroid.listViews.pager.viewPager.HorizontalViewPager {
 
 
     public String getItemTitle(int position, Object o) {
         if (o instanceof DataBean) {
             DataBean data = (DataBean) o;
             return data.getName();
+
         }
         return "";
     }

@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.pager.viewPager;
+package com.kimeeo.kAndroidDemos.pager;
 
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.pager.viewPager;
+package com.kimeeo.kAndroidDemos.pager;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;

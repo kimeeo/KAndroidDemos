@@ -1,0 +1,42 @@
+<!--
+  ~ Copyright (c) 2015. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <me.crosswall.lib.coverflow.core.PagerContainer
+        android:id="@+id/pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="?attr/colorPrimary">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </me.crosswall.lib.coverflow.core.PagerContainer>
+
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        app:fillColor="#FF888888"
+        app:pageColor="#88FF0000"
+        app:radius="4dp"
+        app:strokeColor="#FF000000"
+        app:strokeWidth=".5dp" />
+
+    <include layout="@layout/_fragment_recycler_empty_view" />
+
+</RelativeLayout>

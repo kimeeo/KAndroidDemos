@@ -1,19 +1,17 @@
-package com.kimeeo.kAndroidDemos.pager.viewPager;
+package com.kimeeo.kAndroidDemos.pager;
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
 import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
-import com.kimeeo.kAndroidDemos.recycleView.verticalViews.GridView;
-import com.kimeeo.kAndroidDemos.recycleView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.services.DataBean;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
 
 /**
  * Created by BhavinPadhiyar on 22/05/16.
  */
-public class HorizontalFragmentViewPager extends com.kimeeo.kAndroid.listViews.pager.fragmentPager.BaseHorizontalFragmentViewPager {
+public class VerticleFragmentViewPager extends com.kimeeo.kAndroid.listViews.pager.fragmentPager.BaseVerticalFragmentViewPager {
 
 
     public String getItemTitle(int position, Object o) {
@@ -32,16 +30,12 @@ public class HorizontalFragmentViewPager extends com.kimeeo.kAndroid.listViews.p
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
-        return new AQDataProvider(getActivity(), true, false);
+        return new AQDataProvider(getActivity(), false, false);
     }
 
     @Override
     public Fragment getItemFragment(int i, Object o) {
-        Fragment view;
-        if (i < 5)
-            view = BaseFragment.newInstance(ListView.class);
-        else
-            view = BaseFragment.newInstance(GridView.class);
+        Fragment view = BaseFragment.newInstance(DummyFragment.class);
         return view;
     }
 }

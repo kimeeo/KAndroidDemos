@@ -82,6 +82,10 @@ dependencies {
     compile("com.github.kimeeo:KAndroid_RecyclerViewExt:$RECYCLER_VIEW_EXT_VERSION@aar") {
         transitive = true
     }
+    final VIEW_PAGER_EXT_VERSION = 'c5f7bb7a2a'
+    compile("com.github.kimeeo:KAndroid_ViewPagerExt:$VIEW_PAGER_EXT_VERSION@aar") {
+        transitive = true
+    }
 
     //https://github.com/500px/greedo-layout-for-android
     compile 'com.fivehundredpx:greedo-layout:1.0.0'
@@ -102,4 +106,7 @@ dependencies {
 
     //https://github.com/nshmura/RecyclerTabLayout
     compile 'com.nshmura:recyclertablayout:1.0.0'
+
+    //https://android-arsenal.com/details/1/3530
+    compile 'com.github.crosswall:Android-Coverflow:release-v1.0.1'
 }

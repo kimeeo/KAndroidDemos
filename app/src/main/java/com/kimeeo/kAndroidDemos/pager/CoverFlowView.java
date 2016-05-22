@@ -1,24 +1,49 @@
-package com.kimeeo.kAndroidDemos.pager.viewPager;
+package com.kimeeo.kAndroidDemos.pager;
 
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ToxicBakery.viewpager.transforms.StackTransformer;
 import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.pager.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.pager.viewPager.BaseViewPagerAdapter;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.DataBean;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
+import com.viewpagerindicator.PageIndicator;
+
+import me.crosswall.lib.coverflow.CoverFlow;
 
 /**
  * Created by BhavinPadhiyar on 22/05/16.
  */
-public class HorizontalViewPager extends com.kimeeo.kAndroid.listViews.pager.viewPager.HorizontalViewPager {
+public class CoverFlowView extends com.kimeeo.kAndroid.listViews.pager.viewPager.HorizontalViewPager {
 
+    @Override
+    @LayoutRes
+    protected int getRootRefreshLayoutResID() {
+        return R.layout._fragment_view_pager_cover_flow;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getRootLayoutResID() {
+        return R.layout._fragment_view_pager_cover_flow;
+    }
+
+    @Override
+    protected void setUpIndicator(View indicator, ViewPager viewPager, boolean isFirstTime) {
+        if (isFirstTime && indicator instanceof PageIndicator) {
+            PageIndicator pageIndicator = (PageIndicator) indicator;
+            pageIndicator.setViewPager(viewPager);
+        } else if (indicator instanceof PageIndicator) {
+            PageIndicator pageIndicator = (PageIndicator) indicator;
+            pageIndicator.notifyDataSetChanged();
+        }
+    }
 
     public String getItemTitle(int position, Object o) {
         if (o instanceof DataBean) {
@@ -30,7 +55,25 @@ public class HorizontalViewPager extends com.kimeeo.kAndroid.listViews.pager.vie
     }
 
     protected void configViewPager(ViewPager viewPager, BaseViewPagerAdapter mAdapter, View indicator) {
-        viewPager.setPageTransformer(true, new StackTransformer());
+        boolean showTransformer = true;
+        viewPager.setClipChildren(false);
+        viewPager.setOffscreenPageLimit(15);
+        if (showTransformer) {
+
+            new CoverFlow.Builder()
+                    .with(viewPager)
+                    .scale(0.3f)
+                    .pagerMargin(0f)
+                    .spaceSize(0f)
+                    .rotationY(25f)
+                    .build();
+
+        } else {
+            viewPager.setPageMargin(30);
+            viewPager.setClipChildren(false);
+        }
+
+
     }
 
     @Override
@@ -69,3 +112,4 @@ public class HorizontalViewPager extends com.kimeeo.kAndroid.listViews.pager.vie
         }
     }
 }
+
