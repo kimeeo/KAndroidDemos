@@ -87,6 +87,19 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_recycle_view_fast_scroll_vertical_staggered, com.kimeeo.kAndroidDemos.recycleView.fastScroll.StaggeredGridView.class);
         views.put(R.id.nav_recycle_view_fast_scroll_vertical_responsive, com.kimeeo.kAndroidDemos.recycleView.fastScroll.ResponsiveView.class);
 
+        views.put(R.id.nav_recycle_view_helper, com.kimeeo.kAndroidDemos.recycleView.Helper.class);
+
+        views.put(R.id.nav_horizontal_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.HorizontalViewPager.class);
+        views.put(R.id.nav_verticle_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.VerticleViewPager.class);
+
+        views.put(R.id.nav_horizontal_fragment_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.HorizontalFragmentViewPager.class);
+        views.put(R.id.nav_verticle_fragment_view_pager, com.kimeeo.kAndroidDemos.pager.viewPager.VerticleFragmentViewPager.class);
+
+
+        views.put(R.id.nav_indicator_jake_wharton, com.kimeeo.kAndroidDemos.pager.viewPager.Indicator_JakeWharton.class);
+        views.put(R.id.nav_indicator_smart_tab, com.kimeeo.kAndroidDemos.pager.viewPager.Indicator_SmartTab.class);
+        views.put(R.id.nav_indicator_recyle_view, com.kimeeo.kAndroidDemos.pager.viewPager.Indicator_RecycleView.class);
+
 
 
 

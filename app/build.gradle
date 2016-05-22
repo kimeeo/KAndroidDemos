@@ -17,6 +17,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dexOptions {
+        javaMaxHeapSize "5g"
+    }
     dataBinding {
         enabled = true
     }
@@ -31,7 +34,7 @@ dependencies {
     compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
 
     //final KANDROID_LISTVIEW_VERSION = 'VA0.1'
-    final KANDROID_LISTVIEW_VERSION = '8c4cd035b6'
+    final KANDROID_LISTVIEW_VERSION = '6788f242aa'
 
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
@@ -82,4 +85,21 @@ dependencies {
 
     //https://github.com/500px/greedo-layout-for-android
     compile 'com.fivehundredpx:greedo-layout:1.0.0'
+
+    //View PAGER ANIMATION
+    //https://github.com/geftimov/android-viewpager-transformers
+    compile 'com.eftimoff:android-viewpager-transformers:1.0.1@aar'
+
+    //View PAGER ANIMATION
+    //https://android-arsenal.com/details/1/1193
+    compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+
+    //https://github.com/JakeWharton/ViewPagerIndicator
+    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+
+    //https://github.com/ogaclejapan/SmartTabLayout
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+
+    //https://github.com/nshmura/RecyclerTabLayout
+    compile 'com.nshmura:recyclertablayout:1.0.0'
 }

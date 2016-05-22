@@ -105,6 +105,57 @@
     </item>
 
 
+    <item android:title="View Pager">
+        <menu>
+            <item
+                android:id="@+id/nav_horizontal_view_pager"
+                android:title="Horizontal View Pager" />
+            <item
+                android:id="@+id/nav_verticle_view_pager"
+                android:title="Verticle View Pager" />
+
+        </menu>
+    </item>
+
+    <item android:title="Fragment View Pager">
+        <menu>
+            <item
+                android:id="@+id/nav_horizontal_fragment_view_pager"
+                android:title="Horizontal View Pager" />
+            <item
+                android:id="@+id/nav_verticle_fragment_view_pager"
+                android:title="Verticle View Pager" />
+
+        </menu>
+    </item>
+
+    <item android:title="View Pager Indicator">
+        <menu>
+            <item
+                android:id="@+id/nav_indicator_jake_wharton"
+                android:title="Jake Wharton" />
+
+            <item
+                android:id="@+id/nav_indicator_smart_tab"
+                android:title="Smart Tab" />
+
+            <item
+                android:id="@+id/nav_indicator_recyle_view"
+                android:title="Recyle View" />
+
+        </menu>
+    </item>
+
+
+    <item android:title="Helper">
+        <menu>
+            <item
+                android:id="@+id/nav_recycle_view_helper"
+                android:title="Recycle" />
+        </menu>
+    </item>
+
+
     <item android:title="List View">
         <menu>
             <item android:id="@+id/nav_old_list_view" android:title="Share" />

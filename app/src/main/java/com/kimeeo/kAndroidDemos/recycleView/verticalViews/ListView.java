@@ -29,7 +29,7 @@ public class ListView extends com.kimeeo.kAndroid.listViews.recyclerView.vertica
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
-        return new AQDataProvider(getActivity(), true, true);
+        return new AQDataProvider(getActivity(), true, false);
     }
 
     public class BaseItemHolder1 extends BaseItemHolder {
