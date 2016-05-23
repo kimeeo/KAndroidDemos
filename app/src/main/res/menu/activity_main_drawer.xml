@@ -57,13 +57,15 @@
                 android:title="List" />
             <item
                 android:id="@+id/nav_recycle_view_vertical_sticky_grid"
-                android:title="Grid" />
+                android:title="Grid"
+                android:visible="false" />
             <item
                 android:id="@+id/nav_recycle_view_horizontal_sticky_list"
                 android:title="Horizontal List" />
             <item
                 android:id="@+id/nav_recycle_view_horizontal_sticky_gird"
-                android:title="Horizontal List" />
+                android:title="Horizontal List"
+                android:visible="false" />
         </menu>
     </item>
 

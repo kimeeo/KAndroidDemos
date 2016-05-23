@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
+import com.kimeeo.kAndroidDemos.bindingDemo.PageBind;
 import com.kimeeo.kAndroidDemos.bindingDemo.RecyclerView;
 import com.kimeeo.kAndroidDemos.map.MapView;
 import com.kimeeo.kAndroidDemos.pager.CoverFlowView;
@@ -141,6 +142,8 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_local_raw, RawView.class);
 
         views.put(R.id.nav_bind_recycle, RecyclerView.class);
+
+        views.put(R.id.nav_bind_page, PageBind.class);
 
 
         loadView(R.id.nav_recycle_view_vertical_list);

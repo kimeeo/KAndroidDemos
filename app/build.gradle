@@ -34,8 +34,7 @@ dependencies {
     compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
 
     //final KANDROID_LISTVIEW_VERSION = 'VA0.1'
-    final KANDROID_LISTVIEW_VERSION = '6788f242aa'
-
+    final KANDROID_LISTVIEW_VERSION = '876bdf9104'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
@@ -98,6 +97,7 @@ dependencies {
     //https://android-arsenal.com/details/1/1193
     compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
 
+    // -->> Indicators Starts here
     //https://github.com/JakeWharton/ViewPagerIndicator
     compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
 
@@ -107,6 +107,24 @@ dependencies {
     //https://github.com/nshmura/RecyclerTabLayout
     compile 'com.nshmura:recyclertablayout:1.0.0'
 
+    //https://github.com/ugurtekbas/fadingIndicator
+    //https://github.com/DevLight-Mobile-Agency/NavigationTabBar
+    //https://github.com/DavidPacioianu/InkPageIndicator
+    //https://github.com/H07000223/FlycoPageIndicator
+    //https://github.com/LyndonChin/AndroidRubberIndicator
+    //https://github.com/DevLight-Mobile-Agency/NavigationTabBar
+    //https://github.com/chenupt/SpringIndicator
+    // Indicators END here  <<---
+
+    //View Pager
+    //https://github.com/mallethugo/RealParallaxAndroid
+    //https://github.com/kaelaela/VerticalViewPager
+
+
     //https://android-arsenal.com/details/1/3530
     compile 'com.github.crosswall:Android-Coverflow:release-v1.0.1'
+
+    //https://github.com/kakajika/FragmentAnimations
+    //ANIMATION
+    compile 'com.labo.kaji:fragmentanimations:0.1.0'
 }

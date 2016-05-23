@@ -32,6 +32,7 @@ public class ListView extends com.kimeeo.kAndroid.listViews.recyclerView.vertica
         return view;
     }
 
+
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
@@ -45,9 +46,11 @@ public class ListView extends com.kimeeo.kAndroid.listViews.recyclerView.vertica
 
         @Override
         public void updateItemView(Object o, View view, int i) {
-            DataBean data = (DataBean) o;
-            TextView title = (TextView) view.findViewById(R.id.title);
-            title.setText(i + ". " + data.getName());
+            if (o instanceof DataBean) {
+                DataBean data = (DataBean) o;
+                TextView title = (TextView) view.findViewById(R.id.title);
+                title.setText(i + ". " + data.getName());
+            }
         }
     }
 }

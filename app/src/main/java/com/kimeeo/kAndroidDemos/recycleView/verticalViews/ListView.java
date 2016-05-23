@@ -11,7 +11,6 @@ import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.DataBean;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
-
 /**
  * Created by BhavinPadhiyar on 02/05/16.
  */
@@ -32,6 +31,15 @@ public class ListView extends com.kimeeo.kAndroid.listViews.recyclerView.vertica
         return new AQDataProvider(getActivity(), true, false);
     }
 
+    /*
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        if (enter) {
+            return MoveAnimation.create(MoveAnimation.UP, enter, 500);
+        } else {
+            return CubeAnimation.create(CubeAnimation.UP, enter, 500);
+        }
+    }*/
     public class BaseItemHolder1 extends BaseItemHolder {
         public BaseItemHolder1(View itemView) {
             super(itemView);
