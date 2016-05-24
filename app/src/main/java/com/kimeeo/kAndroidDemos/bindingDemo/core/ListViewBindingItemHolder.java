@@ -3,7 +3,6 @@ package com.kimeeo.kAndroidDemos.bindingDemo.core;
 import android.databinding.ViewDataBinding;
 import android.view.View;
 
-
 import com.kimeeo.kAndroid.listViews.listView.BaseItemHolder;
 
 import java.util.Map;
@@ -14,11 +13,17 @@ import java.util.Map;
 public class ListViewBindingItemHolder<T extends ViewDataBinding> extends BaseItemHolder {
 
     private final Binding<T> binding;
-
+    private Map<Integer, Object> variables;
     public ListViewBindingItemHolder(View itemView, int variableID) {
         super(itemView);
         binding = new Binding<T>(itemView,variableID);
         setVariables(getDefaultMap());
+    }
+
+    public ListViewBindingItemHolder(View itemView, int variableID, Map<Integer, Object> variables) {
+        super(itemView);
+        binding = new Binding<T>(itemView, variableID);
+        setVariables(variables);
     }
 
     public ListViewBindingItemHolder(View itemView, Map<Integer, Object>  map) {
@@ -28,27 +33,37 @@ public class ListViewBindingItemHolder<T extends ViewDataBinding> extends BaseIt
         setVariables(getDefaultMap());
     }
 
+
     public ListViewBindingItemHolder(View itemView){
         this(itemView, -1);
-    }
-
-    protected Map<Integer, Object> getDefaultMap() {
-        return null;
     }
 
     public T getBinding(){
         return binding.getBinding();
     }
+
     public void updateItemView(Object item, int position){
         setVariable(item);
         super.updateItemView(item, position);
     }
+
     public void updateItemView(Object data, View view, int position){
 
     }
+
+    protected Map<Integer, Object> getDefaultMap() {
+        return variables;
+    }
+
+    public Map<Integer, Object> getVariables() {
+        return variables;
+    }
+
     public void setVariables(Map<Integer,Object> data){
+        variables = data;
         binding.setVariables(data);
     }
+
     public void setVariable(Object data){
         binding.setVariable(data);
     }

@@ -13,6 +13,13 @@ import java.util.Map;
 public class RecyclerViewBindingItemHolder<T extends ViewDataBinding> extends BaseItemHolder {
 
     private final Binding<T> binding;
+    private Map<Integer, Object> variables;
+
+    public RecyclerViewBindingItemHolder(View itemView, int variableID, Map<Integer, Object> variables) {
+        super(itemView);
+        binding = new Binding<T>(itemView, variableID);
+        setVariables(variables);
+    }
 
     public RecyclerViewBindingItemHolder(View itemView, int variableID) {
         super(itemView);
@@ -27,12 +34,22 @@ public class RecyclerViewBindingItemHolder<T extends ViewDataBinding> extends Ba
         setVariables(getDefaultMap());
     }
 
+
     public RecyclerViewBindingItemHolder(View itemView){
         this(itemView, -1);
     }
 
     protected Map<Integer, Object> getDefaultMap() {
-        return null;
+        return variables;
+    }
+
+    public Map<Integer, Object> getVariables() {
+        return variables;
+    }
+
+    public void setVariables(Map<Integer, Object> data) {
+        variables = data;
+        binding.setVariables(data);
     }
 
     public T getBinding(){
@@ -45,9 +62,7 @@ public class RecyclerViewBindingItemHolder<T extends ViewDataBinding> extends Ba
     public void updateItemView(Object data, View view, int position){
 
     }
-    public void setVariables(Map<Integer,Object> data){
-        binding.setVariables(data);
-    }
+
     public void setVariable(Object data){
         binding.setVariable(data);
     }

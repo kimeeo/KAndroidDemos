@@ -119,8 +119,8 @@ dependencies {
     //View Pager
     //https://github.com/mallethugo/RealParallaxAndroid
     //https://github.com/kaelaela/VerticalViewPager
-
-
+    //https://github.com/rharter/ViewPager-Android
+    //https://github.com/ybq/ParallaxViewPager
     //https://android-arsenal.com/details/1/3530
     compile 'com.github.crosswall:Android-Coverflow:release-v1.0.1'
 
