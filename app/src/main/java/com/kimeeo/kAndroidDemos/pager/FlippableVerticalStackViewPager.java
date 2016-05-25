@@ -1,15 +1,12 @@
 package com.kimeeo.kAndroidDemos.pager;
 
 import android.support.annotation.NonNull;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ToxicBakery.viewpager.transforms.StackTransformer;
 import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.pager.BaseItemHolder;
-import com.kimeeo.kAndroid.listViews.pager.viewPager.BaseViewPagerAdapter;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.DataBean;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
@@ -26,10 +23,6 @@ public class FlippableVerticalStackViewPager extends com.kimeeo.kAndroid.viewPag
 
         }
         return "";
-    }
-
-    protected void configViewPager(ViewPager viewPager, BaseViewPagerAdapter mAdapter, View indicator) {
-        viewPager.setPageTransformer(true, new StackTransformer());
     }
 
     @Override

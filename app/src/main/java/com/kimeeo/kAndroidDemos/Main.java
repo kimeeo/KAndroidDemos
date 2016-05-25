@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
 import com.kimeeo.kAndroidDemos.bindingDemo.PageBind;
 import com.kimeeo.kAndroidDemos.bindingDemo.RecyclerView;
+import com.kimeeo.kAndroidDemos.greedo.SimpleList500pxStyleView;
 import com.kimeeo.kAndroidDemos.map.MapView;
 import com.kimeeo.kAndroidDemos.pager.CoverFlowView;
 import com.kimeeo.kAndroidDemos.pager.FlippableHorizontalStackViewPager;
@@ -122,6 +123,15 @@ public class Main extends AppCompatActivity
 
 
         views.put(R.id.nav_old_list_view, com.kimeeo.kAndroidDemos.oldListView.ListView.class);
+        views.put(R.id.nav_carousel_view, com.kimeeo.kAndroidDemos.oldListView.CarouselView.class);
+        views.put(R.id.nav_h_flip_view, com.kimeeo.kAndroidDemos.oldListView.HFlipView.class);
+        views.put(R.id.nav_v_flip_view, com.kimeeo.kAndroidDemos.oldListView.VFlipView.class);
+        views.put(R.id.nav_mosaic, com.kimeeo.kAndroidDemos.oldListView.MosaicList.class);
+        views.put(R.id.nav_stack_view, com.kimeeo.kAndroidDemos.oldListView.StackView.class);
+        views.put(R.id.nav_swipe_cards, com.kimeeo.kAndroidDemos.oldListView.SwipeCards.class);
+        views.put(R.id.nav_swipe_deck, com.kimeeo.kAndroidDemos.oldListView.SwipeDeck.class);
+
+
 
         views.put(R.id.nav_map, MapView.class);
 
@@ -143,6 +153,8 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_bind_recycle, RecyclerView.class);
         views.put(R.id.nav_bind_list, com.kimeeo.kAndroidDemos.bindingDemo.ListView.class);
         views.put(R.id.nav_bind_page, PageBind.class);
+
+        views.put(R.id.nav_500px, SimpleList500pxStyleView.class);
 
         loadView(R.id.nav_recycle_view_vertical_list);
     }

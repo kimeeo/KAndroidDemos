@@ -86,6 +86,11 @@ dependencies {
         transitive = true
     }
 
+    final KANDROID_LIST_EXT_VERSION = 'ed821f4f17'
+    compile("com.github.kimeeo:KAndroid_ListViewExt:$KANDROID_LIST_EXT_VERSION@aar") {
+        transitive = true
+    }
+
     //https://github.com/500px/greedo-layout-for-android
     compile 'com.fivehundredpx:greedo-layout:1.0.0'
 

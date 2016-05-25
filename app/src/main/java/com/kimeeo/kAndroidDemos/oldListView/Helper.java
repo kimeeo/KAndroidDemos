@@ -79,7 +79,7 @@ public class Helper extends BaseFragment implements IViewProvider {
 
     @Override
     public View getItemView(int i, LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        return layoutInflater.inflate(R.layout.sample_list_view_item, viewGroup, false);
+        return layoutInflater.inflate(R.layout.sample_list_view_item_card_view, viewGroup, false);
     }
 
     @Override

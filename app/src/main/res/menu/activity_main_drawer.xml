@@ -193,6 +193,35 @@
             <item
                 android:id="@+id/nav_old_list_view"
                 android:title="List" />
+
+
+            <item
+                android:id="@+id/nav_carousel_view"
+                android:title="Carousel View" />
+
+            <item
+                android:id="@+id/nav_h_flip_view"
+                android:title="Flip View Horizontal" />
+
+            <item
+                android:id="@+id/nav_v_flip_view"
+                android:title="Flip View Verticle" />
+
+            <item
+                android:id="@+id/nav_mosaic"
+                android:title="mosaic" />
+
+            <item
+                android:id="@+id/nav_stack_view"
+                android:title="Stack View" />
+
+            <item
+                android:id="@+id/nav_swipe_cards"
+                android:title="Swipe Cards" />
+
+            <item
+                android:id="@+id/nav_swipe_deck"
+                android:title="Swipe Deck" />
         </menu>
     </item>
 
@@ -224,6 +253,15 @@
             <item android:id="@+id/nav_bind_recycle" android:title="Recycle" />
             <item android:id="@+id/nav_bind_list" android:title="List" />
             <item android:id="@+id/nav_bind_page" android:title="Pager" />
+
+        </menu>
+    </item>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_500px"
+                android:title="500px" />
 
         </menu>
     </item>
