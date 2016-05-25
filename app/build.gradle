@@ -34,7 +34,7 @@ dependencies {
     compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
 
     //final KANDROID_LISTVIEW_VERSION = 'VA0.1'
-    final KANDROID_LISTVIEW_VERSION = '876bdf9104'
+    final KANDROID_LISTVIEW_VERSION = 'f3f9a0cd59'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
@@ -81,7 +81,7 @@ dependencies {
     compile("com.github.kimeeo:KAndroid_RecyclerViewExt:$RECYCLER_VIEW_EXT_VERSION@aar") {
         transitive = true
     }
-    final VIEW_PAGER_EXT_VERSION = 'c5f7bb7a2a'
+    final VIEW_PAGER_EXT_VERSION = 'df54772d02'
     compile("com.github.kimeeo:KAndroid_ViewPagerExt:$VIEW_PAGER_EXT_VERSION@aar") {
         transitive = true
     }
