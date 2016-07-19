@@ -71,7 +71,7 @@ dependencies {
         transitive=true
     }
 
-    final MAP_VERSION = '129c828847'
+    final MAP_VERSION = '934c8912fb'
     compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
         transitive=true
     }
