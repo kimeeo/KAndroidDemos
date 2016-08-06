@@ -39,6 +39,7 @@ public class ListView extends com.kimeeo.kAndroid.listViews.recyclerView.vertica
         return new AQDataProvider(getActivity(), true, true);
     }
 
+
     public class BaseItemHolder1 extends BaseItemHolder {
         public BaseItemHolder1(View itemView) {
             super(itemView);
