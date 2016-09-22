@@ -30,7 +30,7 @@ public class AQDataProvider extends JSONDataProvider {
     protected String getRefreshURL() {
         if(minCurruntPage!=2) {
             minCurruntPage+=1;
-            return "http://www.googledrive.com/host/0B0GMnwpS0IrNRkI5WFVCZG5EUTQ/data_m" + minCurruntPage + ".txt";
+            return "http://kimeeo.com/kAndroidSample/data" + minCurruntPage + ".txt";
         }
         else {
             setCanLoadRefresh(false);
@@ -41,7 +41,7 @@ public class AQDataProvider extends JSONDataProvider {
     protected String getNextURL() {
         if(curruntPage!=4) {
             curruntPage+=1;
-            return "http://www.googledrive.com/host/0B0GMnwpS0IrNRkI5WFVCZG5EUTQ/data" + curruntPage + ".txt";
+            return "http://kimeeo.com/kAndroidSample/data" + curruntPage + ".txt";
         }
         else {
             setCanLoadNext(false);
