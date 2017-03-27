@@ -20,7 +20,6 @@ public class HorizontalFragmentViewPager extends com.kimeeo.kAndroid.listViews.p
         if (o instanceof DataBean) {
             DataBean data = (DataBean) o;
             return data.getName();
-
         }
         return "";
     }

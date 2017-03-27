@@ -164,6 +164,7 @@ public class Main extends AppCompatActivity
         if(clazz!=null)
         {
             Fragment view =BaseFragment.newInstance(clazz);
+
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, view).commit();
         }
     }

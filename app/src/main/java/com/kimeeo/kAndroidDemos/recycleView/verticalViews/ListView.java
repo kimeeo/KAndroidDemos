@@ -15,13 +15,14 @@ import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
  * Created by BhavinPadhiyar on 02/05/16.
  */
 public class ListView extends com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.ListView {
+
     @Override
-    public View getItemView(int i, LayoutInflater layoutInflater, ViewGroup viewGroup) {
+    public View getItemView(int viewType, LayoutInflater layoutInflater, ViewGroup viewGroup) {
         return layoutInflater.inflate(R.layout.sample_list_view_item, viewGroup, false);
     }
 
     @Override
-    public BaseItemHolder getItemHolder(int i, View view) {
+    public BaseItemHolder getItemHolder(int viewType, View view) {
         return new BaseItemHolder1(view);
     }
 

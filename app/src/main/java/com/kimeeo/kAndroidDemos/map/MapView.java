@@ -1,18 +1,37 @@
 package com.kimeeo.kAndroidDemos.map;
 
+import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.annotation.RawRes;
 
 import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.map.BaseMapView;
+import com.kimeeo.kAndroidDemos.R;
 
 /**
  * Created by BhavinPadhiyar on 07/05/16.
  */
 public class MapView extends BaseMapView
 {
+
+    @RawRes
+    @Override
+    protected int getDefaultMapStyle() {
+        return R.raw.map_style1;
+    }
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
+        Handler h = new Handler();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                getDataProvider().remove(0);
+                setMapStyle(R.raw.map_style2);
+            }
+        };
+        h.postDelayed(r, 5000);
+
         DataProvider dataProvider = new DataProvider(){
             @Override
             protected void invokeLoadNext() {}

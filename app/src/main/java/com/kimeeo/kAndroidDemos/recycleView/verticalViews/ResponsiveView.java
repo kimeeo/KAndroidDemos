@@ -21,6 +21,7 @@ public class ResponsiveView extends com.kimeeo.kAndroid.listViews.recyclerView.v
         return layoutInflater.inflate(R.layout.sample_list_view_item, viewGroup, false);
     }
 
+
     @Override
     public BaseItemHolder getItemHolder(int i, View view) {
         return new BaseItemHolder1(view);

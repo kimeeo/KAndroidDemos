@@ -5,8 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kimeeo.kAndroid.listViews.ProgressItem;
 import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
-import com.kimeeo.kAndroid.listViews.pager.viewPager.BaseViewPagerAdapter;
 import com.nshmura.recyclertablayout.RecyclerTabLayout;
 
 /**
@@ -44,7 +44,7 @@ abstract public class TabIndicatorRecyclerViewAdapter extends RecyclerTabLayout.
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Object item = dataProvider.get(position);
-        if (item instanceof BaseViewPagerAdapter.ProgressItem) {
+        if (item instanceof ProgressItem) {
             holder.configProgressItem();
             holder.updateProgressView(item);
         } else {
