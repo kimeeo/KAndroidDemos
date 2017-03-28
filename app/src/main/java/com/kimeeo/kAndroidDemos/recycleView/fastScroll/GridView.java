@@ -22,6 +22,15 @@ public class GridView extends com.kimeeo.kAndroid.recyclerViewExt.fastScroll.Fas
     }
 
     @Override
+    protected String getSectionLabel(int position, Object o) {
+        if (o instanceof DataBean) {
+            DataBean data = (DataBean) o;
+            return data.getName();
+        }
+        return "";
+    }
+
+    @Override
     public BaseItemHolder getItemHolder(int i, View view) {
         return new BaseItemHolder1(view);
     }

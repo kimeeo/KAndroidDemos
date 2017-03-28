@@ -1,7 +1,6 @@
 package com.kimeeo.kAndroidDemos.services.volley;
 
 import com.android.volley.Request;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataModel;
 import com.kimeeo.kAndroid.volleyDataProvider.IVolleyRequestProvider;
 import com.kimeeo.kAndroid.volleyDataProvider.JSONDataProvider;
 import com.kimeeo.kAndroidDemos.services.BaseDataModel;
@@ -24,7 +23,7 @@ public class VolleyData extends JSONDataProvider {
     protected String getNextURL() {
         if(curruntPage!=4) {
             curruntPage+=1;
-            return "http://www.googledrive.com/host/0B0GMnwpS0IrNRkI5WFVCZG5EUTQ/data" + curruntPage + ".txt";
+            return "http://kimeeo.com/kAndroidSample/data" + curruntPage + ".txt";
         }
         else {
             setCanLoadNext(false);

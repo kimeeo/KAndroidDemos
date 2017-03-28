@@ -22,7 +22,7 @@ public class SimpleList500pxStyleView extends GreedoView {
     protected double getAspectRatioFor(int index, Object o) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
-        //BitmapFactory.decodeResource(getActivity().getResources(), R.drawable.bubble_shadow, options);
+        BitmapFactory.decodeResource(getActivity().getResources(), R.drawable.image, options);
         return options.outWidth / (double) options.outHeight;
     }
 

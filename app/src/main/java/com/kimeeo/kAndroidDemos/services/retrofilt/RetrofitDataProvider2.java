@@ -1,8 +1,9 @@
 package com.kimeeo.kAndroidDemos.services.retrofilt;
 
 
-import com.kimeeo.kAndroid.retrofitDataProvider.*;
+import com.kimeeo.kAndroid.retrofitDataProvider.BaseRetrofitDataProvider;
 import com.kimeeo.kAndroidDemos.services.BaseDataModel;
+
 import retrofit2.Call;
 import retrofit2.GsonConverterFactory;
 import retrofit2.Retrofit;
@@ -20,7 +21,7 @@ public class RetrofitDataProvider2 extends BaseRetrofitDataProvider{
     public RetrofitDataProvider2()
     {
         Retrofit.Builder builder= new Retrofit.Builder();
-        builder.baseUrl("http://www.googledrive.com/host/0B0GMnwpS0IrNRkI5WFVCZG5EUTQ/");
+        builder.baseUrl("http://kimeeo.com/kAndroidSample/");
         builder.addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit =builder.build();
         service = retrofit.create(PostsService.class);

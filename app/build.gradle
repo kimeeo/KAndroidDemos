@@ -53,7 +53,7 @@ dependencies {
         transitive=true
     }
 
-    final OK_HTTP_DATA_PROVIDER_VERSION = 'cad31f1'
+    final OK_HTTP_DATA_PROVIDER_VERSION = 'be98187'
     compile ("com.github.kimeeo:okHTTPDataProvider:$OK_HTTP_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }

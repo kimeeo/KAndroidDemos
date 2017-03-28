@@ -14,14 +14,14 @@ public class DirectoryListData extends DirectoryDataProvider{
     public DirectoryListData(Context context)
     {
         super(context);
-        setFilters(new String[]{"png","txt"});
+        //setFilters(new String[]{"png","txt"});
     }
 
     @Override
     protected String nextPath() {
         if(curruntPage!=1) {
             curruntPage+=1;
-            return Environment.getExternalStorageDirectory().toString()+"/kandroidData";
+            return Environment.getExternalStorageDirectory().toString() + "/Download";
         }
         else {
             setCanLoadNext(false);

@@ -26,6 +26,15 @@ public class ListView extends com.kimeeo.kAndroid.recyclerViewExt.fastScroll.Fas
         return new BaseItemHolder1(view);
     }
 
+    @Override
+    protected String getSectionLabel(int position, Object o) {
+        if (o instanceof DataBean) {
+            DataBean data = (DataBean) o;
+            return data.getName();
+        }
+        return "";
+    }
+
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
