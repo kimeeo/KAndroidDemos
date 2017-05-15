@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseRecyclerViewAdapter;
 import com.kimeeo.kAndroid.listViews.recyclerView.DefaultRecyclerViewAdapter;

@@ -1,6 +1,6 @@
 package com.kimeeo.kAndroidDemos.oldListView;
 
-import com.kimeeo.kAndroid.listViews.dataProvider.DataModel;
+import com.kimeeo.kAndroid.dataProvider.DataModel;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroidDemos.services.DataBean;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
 

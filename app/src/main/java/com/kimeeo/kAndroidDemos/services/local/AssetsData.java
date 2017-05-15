@@ -2,7 +2,6 @@ package com.kimeeo.kAndroidDemos.services.local;
 
 import android.content.Context;
 
-import com.kimeeo.kAndroid.listViews.dataProvider.DataModel;
 import com.kimeeo.kAndroid.localDataProvider.AssetsDataProvider;
 import com.kimeeo.kAndroidDemos.services.BaseDataModel;
 

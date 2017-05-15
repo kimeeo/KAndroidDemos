@@ -162,6 +162,9 @@
                 android:id="@+id/nav_cover_flow_view_pager"
                 android:title="CoverFlow" />
 
+            <item
+                android:id="@+id/nav_cover_infinite_cycle_view_pager"
+                android:title="Infinite Cycle " />
 
         </menu>
     </item>

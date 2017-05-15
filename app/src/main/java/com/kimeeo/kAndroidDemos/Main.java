@@ -23,6 +23,7 @@ import com.kimeeo.kAndroidDemos.pager.HorizontalViewPager;
 import com.kimeeo.kAndroidDemos.pager.Indicator_JakeWharton;
 import com.kimeeo.kAndroidDemos.pager.Indicator_RecycleView;
 import com.kimeeo.kAndroidDemos.pager.Indicator_SmartTab;
+import com.kimeeo.kAndroidDemos.pager.InfiniteCycleViewPager;
 import com.kimeeo.kAndroidDemos.pager.VerticleFragmentViewPager;
 import com.kimeeo.kAndroidDemos.pager.VerticleViewPager;
 import com.kimeeo.kAndroidDemos.recycleView.ProfileBasedListView;
@@ -120,6 +121,7 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_flippable_vertical_stack_view_pager, FlippableVerticalStackViewPager.class);
         views.put(R.id.nav_flippable_horizontal_stack_view_pager, FlippableHorizontalStackViewPager.class);
         views.put(R.id.nav_cover_flow_view_pager, CoverFlowView.class);
+        views.put(R.id.nav_cover_infinite_cycle_view_pager, InfiniteCycleViewPager.class);
 
 
         views.put(R.id.nav_old_list_view, com.kimeeo.kAndroidDemos.oldListView.ListView.class);

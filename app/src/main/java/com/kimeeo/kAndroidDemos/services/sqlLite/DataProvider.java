@@ -7,16 +7,16 @@ import java.util.List;
 /**
  * Created by BhavinPadhiyar on 03/05/16.
  */
-public class DataProvider extends com.kimeeo.kAndroid.listViews.dataProvider.DataProvider
+public class DataProvider extends com.kimeeo.kAndroid.dataProvider.DataProvider
 {
     MySQLiteDataHelper mySQL;
+    private int curruntPage = 0;
+
     public  DataProvider(Context context)
     {
         mySQL=new MySQLiteDataHelper(context);
         //mySQL.addSample();
     }
-
-    private int curruntPage=0;
 
     @Override
     protected void invokeLoadNext() {

@@ -3,7 +3,7 @@ package com.kimeeo.kAndroidDemos.services.local;
 import android.content.Context;
 import android.os.Environment;
 
-import com.kimeeo.kAndroid.listViews.dataProvider.DirectoryDataProvider;
+import com.kimeeo.kAndroid.dataProvider.DirectoryDataProvider;
 
 /**
  * Created by BhavinPadhiyar on 03/05/16.

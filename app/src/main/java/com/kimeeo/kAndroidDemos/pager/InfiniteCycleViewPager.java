@@ -1,5 +1,6 @@
 package com.kimeeo.kAndroidDemos.pager;
 
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -15,9 +16,10 @@ import com.kimeeo.kAndroidDemos.services.DataBean;
 import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
 
 /**
- * Created by BhavinPadhiyar on 22/05/16.
+ * Created by BhavinPadhiyar on 3/29/17.
  */
-public class HorizontalViewPager extends com.kimeeo.kAndroid.listViews.pager.viewPager.HorizontalViewPager {
+
+public class InfiniteCycleViewPager extends com.kimeeo.kAndroid.listViews.pager.viewPager.HorizontalViewPager {
 
 
     public String getItemTitle(int position, Object o) {
@@ -27,6 +29,16 @@ public class HorizontalViewPager extends com.kimeeo.kAndroid.listViews.pager.vie
 
         }
         return "";
+    }
+
+    @LayoutRes
+    protected int getRootRefreshLayoutResID() {
+        return R.layout._fragment_infinite_cycle_view_pager;
+    }
+
+    @LayoutRes
+    protected int getRootLayoutResID() {
+        return R.layout._fragment_infinite_cycle_view_pager;
     }
 
     protected void configViewPager(ViewPager viewPager, BaseViewPagerAdapter mAdapter, View indicator) {
@@ -69,3 +81,4 @@ public class HorizontalViewPager extends com.kimeeo.kAndroid.listViews.pager.vie
         }
     }
 }
+

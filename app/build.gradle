@@ -37,60 +37,60 @@ dependencies {
 
 
     //final KANDROID_LISTVIEW_VERSION = 'VA0.1'
-    final KANDROID_LISTVIEW_VERSION = 'eefa65b'
+    final KANDROID_LISTVIEW_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
 
 
-    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '5f32a57'
+    final ANDROID_QUERY_DATA_PROVIDER_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:AndroidQuery_DataProvider:$ANDROID_QUERY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final VOLLEY_DATA_PROVIDER_VERSION = 'f08aea4'
+    final VOLLEY_DATA_PROVIDER_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:KAndroid_VolleyDataProvider:$VOLLEY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final OK_HTTP_DATA_PROVIDER_VERSION = 'be98187'
+    final OK_HTTP_DATA_PROVIDER_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:okHTTPDataProvider:$OK_HTTP_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final RETROFIT_DATA_PROVIDER_VERSION = '4c2dc90'
+    final RETROFIT_DATA_PROVIDER_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:RetrofitDataProvider:$RETROFIT_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final RSS_DATA_PROVIDER_VERSION = 'e1920fd'
+    final RSS_DATA_PROVIDER_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:RSSDataProvider:$RSS_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final LOCAL_DATA_PROVIDER_VERSION = '78e8707'
+    final LOCAL_DATA_PROVIDER_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:kAndroid_LocalDataProvider:$LOCAL_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final MAP_VERSION = 'a7aefa2'
+    final MAP_VERSION = 'V3.0.7Beta'
     compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
         transitive=true
     }
 
 
-    final RECYCLER_VIEW_EXT_VERSION = '887d269'
+    final RECYCLER_VIEW_EXT_VERSION = 'V3.0.7Beta'
     compile("com.github.kimeeo:KAndroid_RecyclerViewExt:$RECYCLER_VIEW_EXT_VERSION@aar") {
         transitive = true
     }
-    final VIEW_PAGER_EXT_VERSION = '18b1c81'
+    final VIEW_PAGER_EXT_VERSION = 'V3.0.7Beta'
     compile("com.github.kimeeo:KAndroid_ViewPagerExt:$VIEW_PAGER_EXT_VERSION@aar") {
         transitive = true
     }
 
-    final KANDROID_LIST_EXT_VERSION = '7b18046'
+    final KANDROID_LIST_EXT_VERSION = 'V3.0.7Beta'
     compile("com.github.kimeeo:KAndroid_ListViewExt:$KANDROID_LIST_EXT_VERSION@aar") {
         transitive = true
     }
@@ -132,8 +132,15 @@ dependencies {
     //https://github.com/ybq/ParallaxViewPager
     //https://android-arsenal.com/details/1/3530
     compile 'com.github.crosswall:Android-Coverflow:release-v1.0.1'
+    compile 'com.github.devlight:infinitecycleviewpager:1.0.2'
 
     //https://github.com/kakajika/FragmentAnimations
     //ANIMATION
     compile 'com.labo.kaji:fragmentanimations:0.1.0'
+
+    //https://android-arsenal.com/details/3/4264
+    compile 'com.github.rubensousa:gravitysnaphelper:1.1'
+
+    //https://github.com/loopeer/CardStackView
+    compile 'com.loopeer.library:cardstack:1.0.2'
 }

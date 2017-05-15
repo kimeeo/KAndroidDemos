@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.recyclerView.horizontalViews.ListView;
 import com.kimeeo.kAndroidDemos.R;
-import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
 import com.kimeeo.kAndroidDemos.services.DataBean;
+import com.kimeeo.kAndroidDemos.services.aADataProvider.AQDataProvider;
 
 /**
  * Created by BhavinPadhiyar on 02/05/16.

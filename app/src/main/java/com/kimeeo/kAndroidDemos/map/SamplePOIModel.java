@@ -2,8 +2,8 @@ package com.kimeeo.kAndroidDemos.map;
 
 
 import com.google.android.gms.maps.model.Marker;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataModel;
-import com.kimeeo.kAndroid.listViews.dataProvider.IParseableObject;
+import com.kimeeo.kAndroid.dataProvider.DataModel;
+import com.kimeeo.kAndroid.dataProvider.IParseableObject;
 import com.kimeeo.kAndroid.map.IPOI;
 
 import java.util.List;
@@ -21,11 +21,11 @@ public class SamplePOIModel extends Object implements IParseableObject,IPOI
     public String image;
     public String details;
     public List<SamplePOIModel> children;
-    private Marker marker;
-    private String snippet="data";
     public Double latitude;
     public Double longitude;
     public Double altitude;
+    private Marker marker;
+    private String snippet = "data";
 
     public void dataLoaded(DataModel FullData)
     {

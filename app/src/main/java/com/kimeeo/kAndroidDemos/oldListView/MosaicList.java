@@ -5,8 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViewExt.mosaicList.DefaultMosaicList;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.listView.BaseItemHolder;
 import com.kimeeo.kAndroidDemos.R;
 

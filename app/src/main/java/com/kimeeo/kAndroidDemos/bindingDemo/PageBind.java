@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.ToxicBakery.viewpager.transforms.StackTransformer;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.pager.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.pager.viewPager.BaseViewPagerAdapter;
 import com.kimeeo.kAndroidDemos.BR;

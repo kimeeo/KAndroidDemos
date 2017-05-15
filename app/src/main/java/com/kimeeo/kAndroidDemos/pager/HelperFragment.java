@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kimeeo.kAndroid.core.fragment.BaseFragment;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.pager.fragmentPager.BaseFragmentViewPagerAdapter;
 import com.kimeeo.kAndroid.listViews.pager.fragmentPager.DefaultViewFragmentPagerAdapter;
 import com.kimeeo.kAndroid.listViews.pager.fragmentPager.IFragmentProvider;

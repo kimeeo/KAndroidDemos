@@ -1,0 +1,40 @@
+<!--
+  ~ Copyright (c) 2015. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:icvp_center_page_scale_offset="30dp"
+        app:icvp_max_page_scale="0.8"
+        app:icvp_medium_scaled="true"
+        app:icvp_min_page_scale="0.5"
+        app:icvp_min_page_scale_offset="5dp"
+        app:icvp_scroll_duration="500" />
+
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        app:fillColor="#FF888888"
+        app:pageColor="#88FF0000"
+        app:radius="4dp"
+        app:strokeColor="#FF000000"
+        app:strokeWidth=".5dp" />
+
+    <include layout="@layout/_fragment_recycler_empty_view" />
+
+</RelativeLayout>

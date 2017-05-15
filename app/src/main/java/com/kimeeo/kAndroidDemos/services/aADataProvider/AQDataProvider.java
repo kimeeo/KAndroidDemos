@@ -3,11 +3,8 @@ package com.kimeeo.kAndroidDemos.services.aADataProvider;
 import android.content.Context;
 
 import com.kimeeo.kAndroid.aQueryDataProvider.JSONDataProvider;
-import com.kimeeo.kAndroid.listViews.dataProvider.DataModel;
 import com.kimeeo.kAndroidDemos.services.BaseDataModel;
-import com.kimeeo.kAndroidDemos.services.DataBean;
 
-import java.util.List;
 import java.util.Map;
 
 /**

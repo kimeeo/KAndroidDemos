@@ -6,14 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.DataBean;
-import com.kimeeo.kAndroidDemos.services.okhttp.OkHttpProvider;
-
-import okhttp3.OkHttpClient;
 
 /**
  * Created by BhavinPadhiyar on 02/05/16.

@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseItemHolder;
 import com.kimeeo.kAndroidDemos.R;
 import com.kimeeo.kAndroidDemos.services.DataBean;
@@ -23,7 +23,18 @@ public class ListView extends com.kimeeo.kAndroid.listViews.recyclerView.horizon
     @Override
     public BaseItemHolder getItemHolder(int viewType, View view) {
         return new BaseItemHolder1(view);
+
+
     }
+
+    @Override
+    public void onViewCreated(View view) {
+        //SNAP to corner
+        //
+        //SnapHelper snapHelperStart = new GravitySnapHelper(Gravity.START);
+        //snapHelperStart.attachToRecyclerView(getRecyclerView());
+    }
+
 
     @NonNull
     @Override
