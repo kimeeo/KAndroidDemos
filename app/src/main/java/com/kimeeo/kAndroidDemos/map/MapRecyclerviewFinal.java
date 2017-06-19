@@ -90,7 +90,7 @@ public class MapRecyclerviewFinal extends AbstractMapRecyclerView {
         dataProvider.add(getSample("B1", "534534", 21.012916023, 72.524510072));
         dataProvider.add(getSample("B2", "534534", 20.012916023, 74.524510072));
         dataProvider.setCanLoadNext(false);
-        dataProvider.setNextEnabled(false);
+        dataProvider.setPagingEnabled(false);
         return dataProvider;
     }
     private SamplePOIModel getSample(String name, String phone,Double latitude,Double longitude) {
