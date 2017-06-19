@@ -14,6 +14,8 @@ import com.kimeeo.kAndroid.core.fragment.BaseFragment;
 import com.kimeeo.kAndroidDemos.bindingDemo.PageBind;
 import com.kimeeo.kAndroidDemos.bindingDemo.RecyclerView;
 import com.kimeeo.kAndroidDemos.greedo.SimpleList500pxStyleView;
+import com.kimeeo.kAndroidDemos.map.MapPagerViewFinal;
+import com.kimeeo.kAndroidDemos.map.MapRecyclerviewFinal;
 import com.kimeeo.kAndroidDemos.map.MapView;
 import com.kimeeo.kAndroidDemos.pager.CoverFlowView;
 import com.kimeeo.kAndroidDemos.pager.FlippableHorizontalStackViewPager;
@@ -136,6 +138,10 @@ public class Main extends AppCompatActivity
 
 
         views.put(R.id.nav_map, MapView.class);
+        views.put(R.id.nav_map_pager, MapPagerViewFinal.class);
+        views.put(R.id.nav_map_recycler, MapRecyclerviewFinal.class);
+
+
 
         views.put(R.id.nav_a_q, ListView.class);
         views.put(R.id.nav_retrofit, RetrofitRecyclerViewVertical.class);

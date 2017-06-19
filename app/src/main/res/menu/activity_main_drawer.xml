@@ -231,6 +231,8 @@
     <item android:title="Map">
         <menu>
             <item android:id="@+id/nav_map" android:title="Map" />
+            <item android:id="@+id/nav_map_pager" android:title="Sync View Pager " />
+            <item android:id="@+id/nav_map_recycler" android:title="Sync Recycler" />
 
         </menu>
     </item>

@@ -24,7 +24,7 @@ public class VerticleFragmentViewPager extends com.kimeeo.kAndroid.listViews.pag
     }
 
     /*
-    protected void configViewPager(ViewPager viewPager, BaseViewPagerAdapter mAdapter, View indicator) {
+    protected void configViewPager(AbstractHorizontalViewPager viewPager, BaseViewPagerAdapter mAdapter, View indicator) {
         viewPager.setPageTransformer(true, new StackTransformer());
     }*/
     @NonNull

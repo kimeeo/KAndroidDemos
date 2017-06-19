@@ -25,7 +25,7 @@ public class HorizontalFragmentViewPager extends com.kimeeo.kAndroid.listViews.p
     }
 
     /*
-    protected void configViewPager(ViewPager viewPager, BaseViewPagerAdapter mAdapter, View indicator) {
+    protected void configViewPager(AbstractHorizontalViewPager viewPager, BaseViewPagerAdapter mAdapter, View indicator) {
         viewPager.setPageTransformer(true, new StackTransformer());
     }*/
     @NonNull

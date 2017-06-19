@@ -19,6 +19,7 @@ public class MapView extends BaseMapView
     protected int getDefaultMapStyle() {
         return R.raw.map_style1;
     }
+
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
