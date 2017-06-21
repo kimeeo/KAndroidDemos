@@ -35,9 +35,8 @@ dependencies {
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
     compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
 
-
-    //final KANDROID_LISTVIEW_VERSION = 'VA0.1'
-    final KANDROID_LISTVIEW_VERSION = 'Ant-V1.0.0'
+    final KANDROID_LISTVIEW_VERSION = '48e2e0f485'
+    //final KANDROID_LISTVIEW_VERSION = 'Ant-V1.0.0'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
@@ -75,7 +74,8 @@ dependencies {
         transitive=true
     }
 
-    final MAP_VERSION = 'Ant-V1.0.0'
+    //final MAP_VERSION = 'Ant-V1.0.0'
+    final MAP_VERSION = '3fca3681fc'
     compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
         transitive=true
     }
@@ -90,7 +90,8 @@ dependencies {
         transitive = true
     }
 
-    final KANDROID_LIST_EXT_VERSION = 'Ant-V1.0.0'
+    //final KANDROID_LIST_EXT_VERSION = 'Ant-V1.0.0'
+    final KANDROID_LIST_EXT_VERSION = '1e07d2f58d'
     compile("com.github.kimeeo:KAndroid_ListViewExt:$KANDROID_LIST_EXT_VERSION@aar") {
         transitive = true
     }

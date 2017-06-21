@@ -8,10 +8,10 @@ import android.widget.RelativeLayout;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.kimeeo.kAndroid.listViews.BaseListDataView;
+import com.kimeeo.kAndroid.listViews.fragmentStacks.BaseFragmentStacks;
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseRecyclerView;
 import com.kimeeo.kAndroid.map.BaseMapView;
 import com.kimeeo.kAndroid.map.IPOI;
-import com.kimeeo.kAndroidDemos.stack.BaseFragmentStacks;
 
 /**
  * Created by bpa001 on 6/17/17.
@@ -58,7 +58,7 @@ abstract public class AbstractMapRecyclerView extends BaseFragmentStacks impleme
     protected void syncPager(int page) {
         Object data = getDataProvider().get(page);
         if(data instanceof IPOI && mapView!=null)
-            mapView.moveCameraToLocation((IPOI)data);
+            mapView.moveCameraToPOI((IPOI)data);
         else if(data instanceof Location && mapView!=null)
             mapView.moveCameraToLocation((Location)data);
         else if(mapView!=null)

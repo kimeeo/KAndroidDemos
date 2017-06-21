@@ -23,74 +23,20 @@ import java.util.List;
  */
 
 public class MapRecyclerviewFinal extends AbstractMapRecyclerView {
-
-
-
     @Override
     protected BaseRecyclerView createRecyclerView() {
         return new ListView();
     }
-
     @Override
     protected AbstractMapView createMapView() {
         return new MapView();
     }
     @NonNull
-
     @Override
     protected DataProvider createDataProvider() {
-        DataProvider dataProvider = new StaticDataProvider(){
-            private int pageCount = 1;
-            public int pageSize = 10;
-            public int nextPageTotal = 10;
-            public int count = 0;
-            Handler h = new Handler();
-            Runnable r = new Runnable() {
-                @Override
-                public void run() {
-                    List list = new ArrayList();
-                    for (int i = 0; i < pageSize; i++) {
-                        list.add(getSample("B1", "534534",23.012916023+count,72.524510072+count));
-                        count++;
-                    }
-                    addData(list);
-                }
-            };
-            @Override
-            protected void invokeLoadNext() {
-                if (pageCount != nextPageTotal) {
-                    h.postDelayed(r, 5000);
-                    pageCount += 1;
-                } else {
-                    setCanLoadNext(false);
-                    dataLoadError(null);
-                }
-            }
-            @Override
-            protected void invokeLoadRefresh() {}
-        };
-        /*
-        dataProvider.add(getSample("B1", "534534",23.012916023,72.524510072));
-        dataProvider.add(getSample("B1", "534534", 24.012916023, 72.524510072));
-        dataProvider.add(getSample("B2", "534534", 25.012916023, 73.524510072));
-        dataProvider.add(getSample("B1", "534534",24.012916023,74.334510072));
-        dataProvider.add(getSample("B1", "534534", 21.012916023, 72.524510072));
-        dataProvider.add(getSample("B2", "534534", 20.012916023, 74.524510072));
-        */
-        dataProvider.setCanLoadNext(true);
-        dataProvider.setPagingEnabled(true);
-        return dataProvider;
-    }
-    private SamplePOIModel getSample(String name, String phone,Double latitude,Double longitude) {
-        SamplePOIModel o = new SamplePOIModel();
-        o.name =name;
-        o.details = phone;
-        o.latitude=latitude;
-        o.longitude=longitude;
-        return o;
+        return new MapDataProvider();
     }
     public static class MapView extends AbstractMapView{}
-
     public static class ListView extends AbstractHorizontalRecyclerview{
         @Override
         public View getItemView(int viewType, LayoutInflater layoutInflater, ViewGroup viewGroup) {

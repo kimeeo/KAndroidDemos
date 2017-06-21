@@ -36,29 +36,7 @@ public class MapPagerViewFinal extends AbstractMapPagerView {
     @NonNull
     @Override
     protected DataProvider createDataProvider() {
-        DataProvider dataProvider = new StaticDataProvider(){
-            @Override
-            protected void invokeLoadNext() {}
-            @Override
-            protected void invokeLoadRefresh() {}
-        };
-        dataProvider.add(getSample("B1", "534534",23.012916023,72.524510072));
-        dataProvider.add(getSample("B1", "534534", 24.012916023, 72.524510072));
-        dataProvider.add(getSample("B2", "534534", 25.012916023, 73.524510072));
-        dataProvider.add(getSample("B1", "534534",24.012916023,74.334510072));
-        dataProvider.add(getSample("B1", "534534", 21.012916023, 72.524510072));
-        dataProvider.add(getSample("B2", "534534", 20.012916023, 74.524510072));
-        //dataProvider.setCanLoadNext(false);
-        //dataProvider.setNextEnabled(false);
-        return dataProvider;
-    }
-    private SamplePOIModel getSample(String name, String phone,Double latitude,Double longitude) {
-        SamplePOIModel o = new SamplePOIModel();
-        o.name =name;
-        o.details = phone;
-        o.latitude=latitude;
-        o.longitude=longitude;
-        return o;
+        return new MapDataProvider();
     }
     public static class MapView extends AbstractMapView{}
     public static class ViewPager extends AbstractHorizontalViewPager {
