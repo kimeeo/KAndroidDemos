@@ -31,6 +31,7 @@ import com.kimeeo.kAndroidDemos.pager.VerticleViewPager;
 import com.kimeeo.kAndroidDemos.recycleView.ProfileBasedListView;
 import com.kimeeo.kAndroidDemos.recycleView.adapterLayout.HorizontalLinearLayoutAdapterLayoutView;
 import com.kimeeo.kAndroidDemos.recycleView.adapterLayout.VerticalLinearLayoutAdapterLayoutView;
+import com.kimeeo.kAndroidDemos.recycleView.verticalViews.FanLayout;
 import com.kimeeo.kAndroidDemos.recycleView.verticalViews.GridView;
 import com.kimeeo.kAndroidDemos.recycleView.verticalViews.ListView;
 import com.kimeeo.kAndroidDemos.recycleView.verticalViews.ResponsiveView;
@@ -89,6 +90,8 @@ public class Main extends AppCompatActivity
         views.put(R.id.nav_recycle_view_header_responsive, com.kimeeo.kAndroidDemos.recycleView.verticalHeaderViews.ResponsiveView.class);
 
         views.put(R.id.nav_recycle_view_runtime_layout_change, ProfileBasedListView.class);
+
+        views.put(R.id.nav_recycle_view_fan_layout, FanLayout.class);
 
 
         views.put(R.id.nav_recycle_view_vertical_sticky_list, com.kimeeo.kAndroidDemos.recycleView.stickyRecyclerHeaders.VerticalList.class);

@@ -144,4 +144,13 @@ dependencies {
 
     //https://github.com/loopeer/CardStackView
     compile 'com.loopeer.library:cardstack:1.0.2'
+
+    //https://android-arsenal.com/details/1/5679
+    //compile 'com.github.kapil93:circular-layout-manager:1.0.0'
+
+    //https://github.com/Cleveroad/FanLayoutManager
+    compile 'com.cleveroad:fan-layout-manager:1.0.4'
+
+
+    //https://github.com/BelooS/ChipsLayoutManager?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=4568
 }
