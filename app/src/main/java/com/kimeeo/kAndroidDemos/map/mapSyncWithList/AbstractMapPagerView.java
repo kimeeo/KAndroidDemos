@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.map.mapList;
+package com.kimeeo.kAndroidDemos.map.mapSyncWithList;
 
 import android.location.Location;
 import android.view.ViewGroup;
@@ -8,7 +8,7 @@ import android.widget.RelativeLayout;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.kimeeo.kAndroid.listViews.BaseListDataView;
-import com.kimeeo.kAndroid.listViews.recyclerView.BaseRecyclerView;
+import com.kimeeo.kAndroid.listViews.pager.BaseViewPager;
 import com.kimeeo.kAndroid.map.BaseMapView;
 import com.kimeeo.kAndroid.map.IPOI;
 import com.kimeeo.kAndroidDemos.stack.BaseFragmentStacks;
@@ -17,27 +17,27 @@ import com.kimeeo.kAndroidDemos.stack.BaseFragmentStacks;
  * Created by bpa001 on 6/17/17.
  */
 
-abstract public class AbstractMapRecyclerView extends BaseFragmentStacks implements OnPageChange {
+abstract public class AbstractMapPagerView extends BaseFragmentStacks implements OnPageChange {
     protected ViewGroup.LayoutParams createFragmentHolderLayoutFor(BaseListDataView fragment) {
-        if(fragment instanceof BaseRecyclerView)
+        if(fragment instanceof BaseViewPager)
         {
             ViewGroup.LayoutParams layoutParams=new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT);
             if(fragment.getView().getLayoutParams()!=null && fragment.getView().getLayoutParams() instanceof RelativeLayout.LayoutParams)
-                layoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,getRecyclerViewHeight());
+                layoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,getViewPagerHeight());
             else if(fragment.getView().getLayoutParams()!=null && fragment.getView().getLayoutParams() instanceof FrameLayout.LayoutParams)
-                layoutParams=new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,getRecyclerViewHeight());
+                layoutParams=new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,getViewPagerHeight());
             else if(fragment.getView().getLayoutParams()!=null && fragment.getView().getLayoutParams() instanceof LinearLayout.LayoutParams)
-                layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,getRecyclerViewHeight());
+                layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,getViewPagerHeight());
             return layoutParams;
         }
         return super.createFragmentHolderLayoutFor(fragment);
     }
-    protected int getRecyclerViewHeight() {
-        return 300;
+    protected int getViewPagerHeight(){
+        return 400;
     }
-    BaseRecyclerView recyclerView;
-    public BaseRecyclerView getViewpager() {
-        return recyclerView;
+    BaseViewPager viewpager;
+    public BaseViewPager getViewpager() {
+        return viewpager;
     }
     public BaseMapView getMapView() {
         return mapView;
@@ -64,13 +64,8 @@ abstract public class AbstractMapRecyclerView extends BaseFragmentStacks impleme
         else if(mapView!=null)
             zoomToMapTo(mapView.getGoogleMap(),data);
 
-        if(recyclerView!=null && recyclerView instanceof MapRecyclerView)
-            ((MapRecyclerView)recyclerView).recyclerView().scrollToPosition(page);
-        else if(recyclerView!=null && recyclerView instanceof MapRecyclerView)
-            scrollToPosition(recyclerView,page);
-    }
-    protected void scrollToPosition(BaseRecyclerView recyclerView, int page) {
-
+        if(viewpager!=null)
+            viewpager.gotoItem(page,true);
     }
     protected void zoomToMapTo(GoogleMap googleMap, Object data) {
         /*
@@ -94,16 +89,12 @@ abstract public class AbstractMapRecyclerView extends BaseFragmentStacks impleme
         mapView=createMapView();
         mapView.setOnPageChange(this);
         list[0] = mapView;
-
-        recyclerView=createRecyclerView();
-        if(recyclerView instanceof OnPageChange)
-            ((OnPageChange)recyclerView).setOnPageChange(this);
-        list[1] = recyclerView;
+        viewpager=createViewPagerView();
+        if(viewpager instanceof OnPageChange)
+            ((OnPageChange)viewpager).setOnPageChange(this);
+        list[1] = viewpager;
         return list;
     }
-    abstract protected BaseRecyclerView createRecyclerView();
+    abstract protected BaseViewPager createViewPagerView();
     abstract protected AbstractMapView createMapView();
-    public static interface MapRecyclerView {
-        android.support.v7.widget.RecyclerView recyclerView();
-    }
 }

@@ -1,8 +1,7 @@
-package com.kimeeo.kAndroidDemos.map.mapList;
+package com.kimeeo.kAndroidDemos.map.mapSyncWithList;
 
 import com.google.android.gms.maps.model.Marker;
 import com.kimeeo.kAndroid.dataProvider.DataProvider;
-import com.kimeeo.kAndroid.dataProvider.StaticDataProvider;
 import com.kimeeo.kAndroid.map.BaseMapView;
 
 /**

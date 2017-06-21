@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.map.mapList;
+package com.kimeeo.kAndroidDemos.map.mapSyncWithList;
 
 /**
  * Created by bpa001 on 6/17/17.

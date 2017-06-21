@@ -27,11 +27,13 @@ public class MapView extends BaseMapView
         Runnable r = new Runnable() {
             @Override
             public void run() {
-                getDataProvider().remove(0);
+                getDataProvider().add(getSample("new", "534534",24.232916023,72.524510072));
+                getDataProvider().add(getSample("new", "534534",22.332916023,72.524510072));
+                getDataProvider().add(getSample("new", "534534",21.332916023,72.524510072));
                 setMapStyle(R.raw.map_style2);
             }
         };
-        h.postDelayed(r, 5000);
+        h.postDelayed(r, 10000);
 
         DataProvider dataProvider = new DataProvider(){
             @Override

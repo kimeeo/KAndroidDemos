@@ -1,4 +1,4 @@
-package com.kimeeo.kAndroidDemos.map.mapList;
+package com.kimeeo.kAndroidDemos.map.mapSyncWithList;
 
 import android.view.View;
 import android.widget.AdapterView;

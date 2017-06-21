@@ -3,24 +3,18 @@ package com.kimeeo.kAndroidDemos.map;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ToxicBakery.viewpager.transforms.CubeOutTransformer;
-import com.ToxicBakery.viewpager.transforms.StackTransformer;
 import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.dataProvider.StaticDataProvider;
-import com.kimeeo.kAndroid.listViews.BaseListDataView;
 import com.kimeeo.kAndroid.listViews.pager.BaseItemHolder;
 import com.kimeeo.kAndroid.listViews.pager.BaseViewPager;
 import com.kimeeo.kAndroid.listViews.pager.viewPager.BaseViewPagerAdapter;
 import com.kimeeo.kAndroidDemos.R;
-import com.kimeeo.kAndroidDemos.map.mapList.AbstractMapPagerView;
-import com.kimeeo.kAndroidDemos.map.mapList.AbstractMapView;
-import com.kimeeo.kAndroidDemos.map.mapList.AbstractHorizontalViewPager;
+import com.kimeeo.kAndroidDemos.map.mapSyncWithList.AbstractMapPagerView;
+import com.kimeeo.kAndroidDemos.map.mapSyncWithList.AbstractMapView;
+import com.kimeeo.kAndroidDemos.map.mapSyncWithList.AbstractHorizontalViewPager;
 
 /**
  * Created by bpa001 on 6/17/17.
