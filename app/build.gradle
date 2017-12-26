@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.0"
 
     defaultConfig {
         applicationId "com.kimeeo.kAndroidDemos"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 19
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -30,68 +30,68 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    final SUPPORT_LIBRARY_VERSION = '25.4.0'
+    final SUPPORT_LIBRARY_VERSION = '27.0.2'
     compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
     compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
 
-    final KANDROID_LISTVIEW_VERSION = '48e2e0f485'
-    //final KANDROID_LISTVIEW_VERSION = 'Ant-V1.0.0'
+    final KANDROID_LISTVIEW_VERSION = '-SNAPSHOT'
+    //final KANDROID_LISTVIEW_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:KAndroid_ListView:$KANDROID_LISTVIEW_VERSION@aar"){
         transitive=true
     }
 
 
-    final ANDROID_QUERY_DATA_PROVIDER_VERSION = 'Ant-V1.0.0'
+    final ANDROID_QUERY_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:AndroidQuery_DataProvider:$ANDROID_QUERY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final VOLLEY_DATA_PROVIDER_VERSION = 'Ant-V1.0.0'
+    final VOLLEY_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:KAndroid_VolleyDataProvider:$VOLLEY_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final OK_HTTP_DATA_PROVIDER_VERSION = 'Ant-V1.0.0'
+    final OK_HTTP_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:okHTTPDataProvider:$OK_HTTP_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final RETROFIT_DATA_PROVIDER_VERSION = 'Ant-V1.0.0'
+    final RETROFIT_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:RetrofitDataProvider:$RETROFIT_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    final RSS_DATA_PROVIDER_VERSION = 'Ant-V1.0.0'
+    final RSS_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:RSSDataProvider:$RSS_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
 
-    final LOCAL_DATA_PROVIDER_VERSION = 'Ant-V1.0.0'
+    final LOCAL_DATA_PROVIDER_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:kAndroid_LocalDataProvider:$LOCAL_DATA_PROVIDER_VERSION@aar"){
         transitive=true
     }
 
-    //final MAP_VERSION = 'Ant-V1.0.0'
-    final MAP_VERSION = '3fca3681fc'
+    //final MAP_VERSION = '-SNAPSHOT'
+    final MAP_VERSION = '-SNAPSHOT'
     compile ("com.github.kimeeo:KAndroid_Map:$MAP_VERSION@aar"){
         transitive=true
     }
 
 
-    final RECYCLER_VIEW_EXT_VERSION = 'Ant-V1.0.0'
+    final RECYCLER_VIEW_EXT_VERSION = '-SNAPSHOT'
     compile("com.github.kimeeo:KAndroid_RecyclerViewExt:$RECYCLER_VIEW_EXT_VERSION@aar") {
         transitive = true
     }
-    final VIEW_PAGER_EXT_VERSION = 'Ant-V1.0.0'
+    final VIEW_PAGER_EXT_VERSION = '-SNAPSHOT'
     compile("com.github.kimeeo:KAndroid_ViewPagerExt:$VIEW_PAGER_EXT_VERSION@aar") {
         transitive = true
     }
 
-    //final KANDROID_LIST_EXT_VERSION = 'Ant-V1.0.0'
-    final KANDROID_LIST_EXT_VERSION = '1e07d2f58d'
+    //final KANDROID_LIST_EXT_VERSION = '-SNAPSHOT'
+    final KANDROID_LIST_EXT_VERSION = '-SNAPSHOT'
     compile("com.github.kimeeo:KAndroid_ListViewExt:$KANDROID_LIST_EXT_VERSION@aar") {
         transitive = true
     }
